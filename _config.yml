@@ -1,0 +1,5 @@
+# Site settings
+title: Rodolfo Silva
+email: contato@rodolfosilva.com
+baseurl: "/"
+exclude: ['README.md']
