@@ -7,6 +7,6 @@ published: true
 status: publish
 categories:
 - Outros
-permalink: /outros/hello-world
+permalink: /outros/hello-world/
 ---
 Bem-vindo ao meu blog. Esse é o meu primeiro post. Estou meio sem saber o que vou publicar, mas vou começar procurar novidades para então começar a publicar!

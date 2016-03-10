@@ -2,7 +2,7 @@
 layout: post
 title: Começando com Python
 date: 2015-10-10 10:07:22.000000000 -03:00
-permalink: /python/comecando-com-python
+permalink: /python/comecando-com-python/
 categories:
 - Python
 tags:

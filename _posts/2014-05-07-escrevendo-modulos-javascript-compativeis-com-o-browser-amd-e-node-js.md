@@ -2,7 +2,7 @@
 layout: post
 title: Escrevendo módulos JavaScript compatíveis com o Browser, AMD e Node.js
 date: 2014-05-07 09:54:42.000000000 -03:00
-permalink: /javascript/escrevendo-modulos-javascript-compativeis-com-o-browser-amd-e-node-js
+permalink: /javascript/escrevendo-modulos-javascript-compativeis-com-o-browser-amd-e-node-js/
 categories:
 - GitHub
 - JavaScript

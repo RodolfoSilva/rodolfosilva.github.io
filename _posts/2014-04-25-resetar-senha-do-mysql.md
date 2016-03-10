@@ -2,7 +2,7 @@
 layout: post
 title: Resetar senha do MySQL
 date: 2014-04-25 16:38:19.000000000 -03:00
-permalink: /utilitarios/resetar-senha-do-mysql
+permalink: /utilitarios/resetar-senha-do-mysql/
 categories:
 - Utilitários
 tags:

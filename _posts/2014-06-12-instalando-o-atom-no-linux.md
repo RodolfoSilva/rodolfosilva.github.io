@@ -2,7 +2,7 @@
 layout: post
 title: Instalando o Atom no linux
 date: 2014-06-12 12:23:38.000000000 -03:00
-permalink: /opensource/instalando-o-atom-no-linux
+permalink: /opensource/instalando-o-atom-no-linux/
 categories:
 - GitHub
 - OpenSource

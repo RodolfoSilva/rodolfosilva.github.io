@@ -2,7 +2,7 @@
 layout: post
 title: Como criar categorias e subcategorias com Django
 date: 2015-12-17 13:30:24.000000000 -03:00
-permalink: /python/como-criar-categorias-e-subcategorias-com-django
+permalink: /python/como-criar-categorias-e-subcategorias-com-django/
 categories:
 - Django
 - Python

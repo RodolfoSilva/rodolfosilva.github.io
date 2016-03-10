@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Currículo
-permalink: /curriculo
+permalink: /curriculo/
 ---
 
 ## Rodolfo da Silva Santos

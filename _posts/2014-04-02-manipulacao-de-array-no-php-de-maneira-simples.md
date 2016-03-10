@@ -2,7 +2,7 @@
 layout: post
 title: Manipulação de array no PHP de maneira simples
 date: 2014-04-02 22:30:49.000000000 -03:00
-permalink: /php/manipulacao-de-array-no-php-de-maneira-simples
+permalink: /php/manipulacao-de-array-no-php-de-maneira-simples/
 categories:
 - GitHub
 - OpenSource
