@@ -1,0 +1,44 @@
+---
+layout: post
+title: Criando painel de administração do seu tema em WordPress
+date:
+type: post
+published: false
+status: private
+permalink: /wordpress/criando-painel-de-administracao-seu-theme-em-wordpress
+categories:
+- Tutorial
+- WordPress
+tags: []
+meta:
+  _edit_last: '1'
+  _yoast_wpseo_focuskw: Criando painel de administração
+  _yoast_wpseo_metadesc: Criando painel de administração para o seu tema em WordPress,
+    para facilitar a sua vida e a do seu cliente no momento de fazer modificações
+    no tema.
+  _yoast_wpseo_linkdex: '82'
+  _thumbnail_id: '105'
+author:
+  login: rodolfosilva
+  email: contato@rodolfosilva.com
+  display_name: Rodolfo Silva
+  first_name: Rodolfo
+  last_name: Silva
+---
+<p>Quando começamos a desenvolver um tema par <strong>WordPress </strong>temos que adicionar nossas próprias opções, alem das oferecidas pelo <strong>CMS</strong>, então logo vem a necessidade de criar um painel de administração para o tema. Onde vai tornar a nossa vida e a do nosso cliente mais fácil, você não vai precisar entrar no código fonte do tema para alterar as opções quando elas forem necessárias, bastando apenas ir ao painel e fazer a modificação desejada e salvá-las. Você vai poder adicionar qualquer tipo de opção para controlar o seu tema no painel de administração como: upload de imagem, listas, seletor de cores, textos e muitas outras a depender a sua criatividade.</p>
+<p>Agora vou explicar de maneira simples como criar este painel para administrar o nosso tema. Vamos fazer este tutorial em três partes para que não fique muito logo esta postagem:</p>
+<p><a title="Criando painel de administração do seu theme em WordPress - Parte I" href="http://rodolfosilva.com/wordpress/criando-painel-de-administracao-seu-theme-em-wordpress/">Criando painel de administração do seu tema em WordPress - Parte I</a><br />
+Criando painel de administração do seu tema em WordPress - Parte II<br />
+Criando painel de administração do seu tema em WordPress - Parte III</p>
+<p><small>A medida em que eu crie as novas partes atualizarei os links a cima.</small></p>
+<p>A forma em que vou codificar é a que eu acho mais elegante, então vamos la:</p>
+<p>Primeiramente vamos criar dentro da pasta do tema a pasta <code>/partials</code> e então criaremos o arquivo <code>admin.php</code> dentro de <code>/partials/</code> com as seguintes instruções:</p>
+<p>[gist url="https://gist.github.com/RodolfoSilva/6a43e0f6a98646d0d4d6"]</p>
+<p>Agora vamos adicionar o <strong>HTML</strong> em nosso painel, vamos editar o método <code>tema_config_page</code> adicionando as seguintes instruções:</p>
+<p>[gist url="https://gist.github.com/RodolfoSilva/a1afccdae835e74180e3"]</p>
+<p>No arquivo <code>functions.php</code> vamos incluir o código da class que acabamos de criar:</p>
+<p>[gist url="https://gist.github.com/RodolfoSilva/86cf20a7c0322b77dc9b"]</p>
+<p>E no final nos teremos o seguinte resultado:</p>
+<p><img class="alignnone wp-image-101 size-large" src="{{ site.baseurl }}/assets/painel-adminitracao-wordpress-1024x750.png" alt="painel-adminitracao-wordpress" width="620" height="454" /></p>
+<p>E agora na próximo parte do nosso tutorial adicionaremos funções legais ao nosso painel permitindo enviar imagem usando o gerenciador de mídias do WordPress.</p>
+<p>Deixem sua avalização sobre o artigo nos comentários abaixo ou se você tiver duvida ou sugestão sobre o que você gostaria de ver na próxima parte do tutorial deixe seu comentário abaixo também.</p>

@@ -1,0 +1,30 @@
+---
+layout: post
+title: Categoria com subcategorias agrupada no select
+date: 
+type: post
+published: false
+status: draft
+categories:
+- Django
+- Python
+tags:
+- django
+- django admin
+- django forms
+- python
+meta:
+  _edit_last: '1'
+author:
+  login: rodolfosilva
+  email: contato@rodolfosilva.com
+  display_name: Rodolfo Silva
+  first_name: Rodolfo
+  last_name: Silva
+---
+<p>Anteriormente escrevi um post mostrando como cadastrar categorias e subcategorias em uma unica tabela com <strong><a href="https://www.djangoproject.com/" target="_blank">Django 1.9</a></strong>. Agora vou mostrar como podemos criar um campo, onde serão listadas todas as categorias, e abaixo delas as suas subcategorias. Ficando como na imagem abaixo:<br />
+<img class="size-full wp-image-158 aligncenter" src="{{ site.baseurl }}/assets/categoria-subcategorias.png" alt="categoria-subcategorias" width="155" height="153" /></p>
+<p>Eu considero isso ideal para quando queremos que sejam utilizadas apenas as subcategorias ao invés das categorias. No caso de um site onde devemos cadastrar produtos onde estes produtos devem pertencer a uma subcategoria e não a categoria em si. Vamos utilizar este exemplo então para darmos continuidade ao post.<br />
+Primeiro vamos criar um novo model chamado Produto que vai ter 4 campos: nome, quantidade, valor e categoria ficando assim:</p>
+<p>[gist url="https://gist.github.com/RodolfoSilva/141a063e7c33c363c591"]</p>
+<p>&nbsp;</p>
