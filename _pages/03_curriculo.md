@@ -59,8 +59,12 @@ Analista de Sistemas Pleno com foco em desenvolvimento
 
 ### EXPERIÊNCIA PROFISSIONAL
 
+* Agilize - Contabilidade Online
+    * __Período:__ desde Julho de 2016
+    * __Função:__ software engineer
+
 * Capgemini
-    * __Período:__ desde Julho de 2015
+    * __Período:__ de Julho de 2015 à Junho de 2016
     * __Função:__ Consultor de Tecnologia
 
 * EEEMBA - Escola de Engenharia Eletromecânica Bahia
