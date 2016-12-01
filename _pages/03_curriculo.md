@@ -5,7 +5,7 @@ permalink: /curriculo/
 ---
 
 ## Rodolfo da Silva Santos
-Brasileiro, Casado, 23 anos<br>
+Brasileiro, Casado, 24 anos<br>
 Salvador - BA
 
 __Celular:__ +55 71 98366-1106 / +55 71 98320­-3344<br>
@@ -34,28 +34,25 @@ Analista de Sistemas Pleno com foco em desenvolvimento
     * less, Sass
 
 * __IDE:__
-    * Atom, Sublime Text, VIM, PyCharm, NetBeans, Eclipse.
+    * Atom, Sublime Text, VIM, PyCharm.
 
 * __Banco de Dados:__
     * PostgreSQL, MariaDB/MySQL, SQLite, MongoDB
 
 * __Frameworks:__
-    * Django, CodeIgniter, CakePHP, jQuery, Bootstrap, Slim, Express, Underscore.js, Angular.js
+    * Flask, Django, CodeIgniter, CakePHP, Ionic, Bootstrap, Express, Angular.js, Angular 2
 
-* __CMS:__
-    * WordPress, GHOST
-
-* __Sistemas Operacionais:__
-    * Linux, Windows
+* __Sistema Operacional:__
+    * Linux
 
 * __Gestor de Projetos:__
-    * Jira, Redmine, Stash, GitLab, Bitbucket
+    * Jira, Redmine, Stash, GitLab, GitHub, Bitbucket
 
 * __Controle de Versão:__
     * GIT, Subversion
 
 * __Ferramentas de Teste:__
-    * unittest(Python), qUnit, PHPUnit
+    * unittest(Python), PHPUnit, jasmine, karma
 
 ### EXPERIÊNCIA PROFISSIONAL
 
