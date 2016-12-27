@@ -29,7 +29,7 @@ Analista de Sistemas Pleno com foco em desenvolvimento
 ### CONHECIMENTOS EXTRACURRICULARES
 
 * __Linguagens de programação:__
-    * Python 2.7, Python 3, PHP, Java, JavaScript, Node.js, Android, jQuery, HTML, CSS3, Jinja2/Twig/Swig
+    * Python 3, Python 2.7, PHP, Java, JavaScript, Node.js, Android, jQuery, HTML, CSS3, Jinja2/Twig/Swig
 
 * __Pré-processadores:__
     * less, Sass
@@ -41,7 +41,7 @@ Analista de Sistemas Pleno com foco em desenvolvimento
     * PostgreSQL, MariaDB/MySQL, SQLite, MongoDB
 
 * __Frameworks:__
-    * Flask, Django, CodeIgniter, CakePHP, Ionic, Bootstrap, Express, Angular.js, Angular 2
+    * Flask, Django, CodeIgniter, CakePHP, Ionic, Bootstrap, Express, Angular 2, Angular.js
 
 * __Sistema Operacional:__
     * Linux
@@ -59,7 +59,7 @@ Analista de Sistemas Pleno com foco em desenvolvimento
 
 * Agilize - Contabilidade Online
     * __Período:__ desde Julho de 2016
-    * __Função:__ software engineer
+    * __Função:__ Software engineer
 
 * Capgemini
     * __Período:__ de Julho de 2015 à Junho de 2016
