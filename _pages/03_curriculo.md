@@ -2,6 +2,7 @@
 layout: page
 title: Currículo
 permalink: /curriculo/
+keywords: software engineer, programador python, front-end, back-end, developer, ionic, angular, python, angular 2, angularjs, flask, javascript, php
 ---
 
 ## Rodolfo da Silva Santos
