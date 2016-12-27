@@ -5,6 +5,7 @@ date: 2013-01-09 20:39:17.000000000 -03:00
 type: post
 published: true
 status: publish
+keywords: hello world, primeiro post, usando jekyll, algumas dicas
 categories:
 - Outros
 permalink: /outros/hello-world/
