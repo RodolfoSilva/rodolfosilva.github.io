@@ -3,6 +3,7 @@ layout: post
 title: Lista de links úteis - Python
 date: 2015-10-19 11:44:07.000000000 -03:00
 permalink: /python/lista-de-links-uteis-python/
+keywords: links úteis, python, dicas de python
 categories:
 - Python
 tags:
