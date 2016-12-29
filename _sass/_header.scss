@@ -156,7 +156,7 @@
 
     &::after {
       content: "";
-      background: url("${assets-base}/bg.jpg") center;
+      background: url("#{$assets-base}/bg.jpg") center;
       opacity: 0.3;
       top: 0;
       left: 0;
