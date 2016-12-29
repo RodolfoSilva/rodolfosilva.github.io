@@ -2,21 +2,21 @@
 layout: page
 title: Currículo
 permalink: /curriculo/
-keywords: software engineer, programador python, front-end, back-end, developer, ionic, angular, python, angular 2, angularjs, flask, javascript, php
+keywords: software engineer, programador python, front-end, back-end, developer, ionic, ionic 2, angular, python, angular 2, angularjs, flask, javascript, php
 ---
 
 ## Rodolfo da Silva Santos
 Brasileiro, Casado, 24 anos<br>
 Salvador - BA
 
-__Celular:__ +55 71 98366-1106 / +55 71 98320­-3344<br>
+__Celular:__ +55 71 98366-1106<br>
 __E­mail:__ contato@rodolfosilva.com<br>
 __Web:__ [www.rodolfosilva.com][my_home_page]<br>
 __GitHub:__ [github.com/RodolfoSilva][my_github]
 
 ### OBJETIVO
 
-Analista de Sistemas Pleno com foco em desenvolvimento
+Desenvolvedor Sênior
 
 ### FORMAÇÃO ACADÊMICA
 
@@ -41,7 +41,7 @@ Analista de Sistemas Pleno com foco em desenvolvimento
     * PostgreSQL, MariaDB/MySQL, SQLite, MongoDB
 
 * __Frameworks:__
-    * Flask, Django, CodeIgniter, CakePHP, Ionic, Bootstrap, Express, Angular 2, Angular.js
+    * Flask, Django, CodeIgniter, CakePHP, Ionic, Ionic 2, Bootstrap, Express, Angular 2, Angular.js
 
 * __Sistema Operacional:__
     * Linux
