@@ -12,7 +12,7 @@
   min-height: $site-header-height;
   background: $dark-primary-color;
   color: #FFF;
-
+  
   .site-title {
     font-size: 26px;
     font-weight: 300;
@@ -153,6 +153,19 @@
     top: 0;
     bottom: 0;
     width: $sidebar-width;
+
+    &::after {
+      content: "";
+      background: url("${assets-base}/bg.jpg") center;
+      opacity: 0.3;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+    }
+
     .wrapper {
       position: absolute;
       top: 50%;
