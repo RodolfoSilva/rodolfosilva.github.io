@@ -2,7 +2,7 @@
 layout: page
 title: Currículo
 permalink: /curriculo/
-keywords: software engineer, programador python, front-end, back-end, developer, ionic, ionic 2, angular, python, angular 2, angularjs, flask, javascript, php
+keywords: software engineer, programador python, programador node, programador javascript, front-end, back-end, developer, ionic, ionic 2, angular, python, angular 2, angularjs, flask, javascript, php
 ---
 
 ## Rodolfo da Silva Santos
@@ -11,7 +11,7 @@ Salvador - BA
 
 __Celular:__ +55 71 98366-1106<br>
 __E­mail:__ contato@rodolfosilva.com<br>
-__Web:__ [www.rodolfosilva.com][my_home_page]<br>
+__Web:__ [rodolfosilva.com][my_home_page]<br>
 __GitHub:__ [github.com/RodolfoSilva][my_github]
 
 ### OBJETIVO
@@ -20,8 +20,9 @@ Desenvolvedor Sênior
 
 ### FORMAÇÃO ACADÊMICA
 
-* Graduação em Sistemas da Informação(Cursando)
+* Graduado em Sistemas da Informação
     * Faculdade Ruy Barbosa
+    * Concluído em 2017
 * Técnico em Tecnologia da Informação
     * EEEMBA - Escola de Engenharia Eletromecânica da Bahia
     * Concluído em 2011
@@ -29,19 +30,19 @@ Desenvolvedor Sênior
 ### CONHECIMENTOS EXTRACURRICULARES
 
 * __Linguagens de programação:__
-    * Python 3, Python 2.7, PHP, Java, JavaScript, Node.js, Android, jQuery, HTML, CSS3, Jinja2/Twig/Swig
+    * PHP, Python, JavaScript, Java, Node.js, HTML, CSS
 
 * __Pré-processadores:__
-    * less, Sass
+    * Sass, less
 
 * __IDE:__
-    * Atom, Sublime Text, VIM, PyCharm.
+    * VS Code, Atom, Sublime Text, VIM, PyCharm.
 
 * __Banco de Dados:__
     * PostgreSQL, MariaDB/MySQL, SQLite, MongoDB
 
 * __Frameworks:__
-    * Flask, Django, CodeIgniter, CakePHP, Ionic, Ionic 2, Bootstrap, Express, Angular 2, Angular.js
+    * Flask, Django, CodeIgniter, CakePHP, Ionic, Ionic 2, Bootstrap, Express, Angular 2, Angular.js, jQuery, Jinja2/Twig/Swig
 
 * __Sistema Operacional:__
     * Linux
@@ -53,7 +54,7 @@ Desenvolvedor Sênior
     * GIT, Subversion
 
 * __Ferramentas de Teste:__
-    * unittest(Python), PHPUnit, jasmine, karma
+    * unittest(Python), PHPUnit, jest, jasmine, karma
 
 ### EXPERIÊNCIA PROFISSIONAL
 
