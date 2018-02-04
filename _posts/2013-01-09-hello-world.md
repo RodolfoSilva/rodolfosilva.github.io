@@ -10,4 +10,5 @@ categories:
 - Outros
 permalink: /outros/hello-world/
 ---
-Bem-vindo ao meu blog. Esse é o meu primeiro post. Estou meio sem saber o que vou publicar, mas vou começar procurar novidades para então começar a publicar!
+Bem-vindo ao meu blog. 
+Essa é a minha primeira postagem no blog. Ainda não tenho ideia do que irei escrever, com certeza não farei publicações semanais. Começarei a procurar novidades para então começar a publicar!
