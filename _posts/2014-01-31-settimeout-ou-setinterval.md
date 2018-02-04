@@ -10,18 +10,18 @@ tags:
 - javascript
 - tutorial
 ---
-Com o __JavaScript__ podemos executar um determinado código de tempos em tempos. Em outras palavras é possível criar eventos. Existem duas funções que são utilizados para a criação destes eventos, o `setTimeout()` e `setInterval()`. A diferença entres estas duas funções esta no comportamento. A função __setTimeout__ é executada apenas uma unica vez após um delay e o __setInterval__ é executada em intervalos de tempo indefinidamente.<br>
+Utilizando __JavaScript__ podemos executar uma determinada função de tempos em tempos. Em outras palavras é possível criar eventos que serão executados dentro do intervalo definido. Existem duas funções que são utilizados para a criação destes eventos que são: o `setTimeout()` e `setInterval()`. A diferença entres estas duas funções esta no comportamento. A função __setTimeout__ é executada apenas uma unica vez após um determinado tempo, e o __setInterval__ é executada em intervalos de tempo indefinidamente.<br>
 {% gist RodolfoSilva/9049274 %}
 
-## Exemplo das funções executando.
+## Exemplo
 
 JavaScript:<br>
 {% gist RodolfoSilva/9049257 %}
 HTML:<br>
 {% gist RodolfoSilva/9049315 %}
 
-Este código atualiza dois campos em um intervalo de tempo determinado, para atualizar o primeiro campo é utilizado a função `setInterval()` para atualizar a hora atual. E o segundo utiliza a função `setTimeout()` para alterar a mensagem uma unica vez após um determinado tempo.
+Este código irá exibir a hora atual, atualizando a cada 1 segundo e após alguns segundos irá alterar o conteúdo do segundo elemento que está na tela. Para atualizar o relógio utilizamos o `setInterval()` que vai ser executado a cada 1 segundo exibindo a hora atual. O `setTimeout()` irá executar apenas uma vez depois de 5 segundos modificando a mensagem que está dentro do segundo elemento.
 
 ## Então qual utilizar?
 
-Depende muito do que esta sendo implementado, no caso de um método onde ele deve ser executado independente do evento ter sido realizado com sucesso ou não, neste caso utilizaríamos o `setInterval()`. Já se estivéssemos criando um sistema que dependesse do resultado de outra função e tivesse um daly utilizaríamos o `setTimeout()`.
+O indicado é utilizar o `setInterval()` sempre que você queria que uma determinada função seja executada entre invervalos de tempo. E utilizar o `setTimeout()` quando você quiser executar um método depois de um determinado tempo.
