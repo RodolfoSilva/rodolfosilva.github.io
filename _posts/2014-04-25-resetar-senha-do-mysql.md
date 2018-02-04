@@ -12,18 +12,18 @@ tags:
 - sql
 ---
 
-Para resetar a sua senha do **MySQL** primeiramente você deve encerrar a
-execução usando o comando:
+Para resetar a senha do **MySQL** você deve encerrar a o processo
+`mysqld`. No linux utilize o comando:
 
 `sudo /etc/init.d/mysqld stop`<br>
 ou<br>
 `sudo service mysql stop`
 
-Após ter parado execute a seguinte linha de comando:
+Após ter finalizado o processo execute o comando:
 
 `sudo mysqld_safe --skip-grant-tables &`
 
-Agora que iniciou o **MySQL**, digite:
+Quando finalizar a inicialização do **MySQL**, insira o comando:
 
 `sudo mysql`
 
@@ -39,7 +39,7 @@ Agora atualize os privilegios, digite:
 
 `flush privileges;`
 
-E agora pode sair do **MySQL** e reiniciar o serviço:
+Agora saia do **MySQL** e reiniciar o serviço, utilize os comandos abaixo:
 
 `\q`<br>
 `sudo /etc/init.d/mysqld restart;`
