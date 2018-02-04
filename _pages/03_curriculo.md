@@ -2,7 +2,7 @@
 layout: page
 title: Currículo
 permalink: /curriculo/
-keywords: software engineer, programador python, programador node, programador javascript, front-end, back-end, developer, ionic, ionic 2, angular, python, angular 2, angularjs, flask, javascript, php
+keywords: software engineer, programador python, programador node, programador javascript, front-end, back-end, developer, react, react-native, ionic, ionic 2, angular, python, angular 2, angularjs, flask, javascript, php
 ---
 
 ## Rodolfo da Silva Santos
@@ -41,8 +41,8 @@ Desenvolvedor Sênior
 * __Banco de Dados:__
     * PostgreSQL, MariaDB/MySQL, SQLite, MongoDB
 
-* __Frameworks:__
-    * Flask, Django, CodeIgniter, CakePHP, Ionic, Ionic 2, Bootstrap, Express, Angular 2, Angular.js, jQuery, Jinja2/Twig/Swig
+* __Frameworks/Bibliotecas:__
+    * Flask, Django, CodeIgniter, CakePHP, React, React Native, Ionic, Ionic 2, Bootstrap, Express, Angular 2, Angular.js, jQuery, Jinja2/Twig/Swig
 
 * __Sistema Operacional:__
     * Linux
