@@ -11,6 +11,7 @@ categories:
 tags:
 - array
 - colaboração
+- CakePHP
 - github
 - open-source
 - PHP
@@ -19,12 +20,12 @@ tags:
 
 Muitos já devem ter ouvido falar do **[CakePHP][CakePHP_Hash]** e talvez da
 class **Hash** que vem junto com o pacote de bibliotecas do **framework**.
-Aqui trabalho utilizamos o **[CakePHP][CakePHP_Hash]** para desenvolver algumas
-aplicações e utilizamos bastante a _class_ **Hash** para manipularmos os
+Aqui no trabalho utilizamos o **[CakePHP][CakePHP_Hash]** para desenvolver algumas
+aplicações. Utilizamos bastante a _class_ **Hash** para manipularmos os
 _arrays_ porém não é sempre que eu utilizo o **[CakePHP][CakePHP_Hash]** 
-para desenvolver minhas aplicações então resolvi pegar a class **Hash** e
-adaptar ela pra rodar sem dependências de algumas biblioteca 
-do **[CakePHP][CakePHP_Hash]**.
+para desenvolver meus projetos, então resolvi extrair a class **Hash** do 
+**[CakePHP][CakePHP_Hash]** e adaptar ela pra rodar sem dependências de 
+qualquer biblioteca do **[CakePHP][CakePHP_Hash]**.
 
 Como a class **Hash** foi originalmente desenvolvida pela comunidade do
 **[CakePHP][CakePHP_Hash]** no site deles você pode encontrar toda a
@@ -32,14 +33,13 @@ documentação e exemplos de implementação da [class Hash][class Hash].
 
 Coloquei o código da _class_ que eu modifiquei em minha página
 do **[GitHub][GitHub_Hash]** junto com o código segue a mesma documentação que
-você pode encontrar no site do  **[CakePHP][CakePHP_Hash]** . Para utilizar
-esta _class_ você só precisa incluir em seu projeto e seguir a orientação da
-documentação do  **[CakePHP][CakePHP_Hash]**.
+você pode encontrar no site do **[CakePHP][CakePHP_Hash]**. Para utilizar
+essa _class_ você importala no projeto e seguir a orientação da
+documentação do **[CakePHP][CakePHP_Hash]**.
 
 **[GitHub][my_GitHub]**: [github.com/{{ site.github_username }}/Hash][GitHub_Hash]
 
 Deixe o seu comentário abaixo com a sua opinião sobre este pequeno artigo.
-
 
 [my_GitHub]: https://github.com/{{ site.github_username }}/ "Rodolfo Silva"
 [GitHub_Hash]: https://github.com/{{ site.github_username }}/Hash "Class Hash"
