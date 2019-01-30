@@ -2,7 +2,7 @@
 layout: post
 title: Validar e formatar data/hora com PHP
 date: 2014-02-25 11:40:11.000000000 -03:00
-permalink: /php/validar-e-formatar-data-hora-com-php/
+slug: php/validar-e-formatar-data-hora-com-php/
 categories:
 - PHP
 tags:

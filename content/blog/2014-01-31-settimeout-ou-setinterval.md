@@ -2,7 +2,7 @@
 layout: post
 title: Diferença entre setTimeout e setInterval
 date: 2014-01-31 11:47:02.000000000 -03:00
-permalink: /javascript/settimeout-ou-setinterval/
+slug: javascript/settimeout-ou-setinterval/
 categories:
 - JavaScript
 tags:
