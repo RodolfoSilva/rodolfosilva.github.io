@@ -1,39 +1,34 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
-import { rhythm, scale } from '../../utils/typography'
-import Header from './Header';
+import { rhythm } from '../../utils/typography'
+import Header from './Header'
+import styles from './styles.module.css'
 
 class Layout extends React.Component {
-  render() {
+  render () {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
-    let isMain = location.pathname === rootPath;
+    let isMain = location.pathname === rootPath
 
     return (
+      <div>
         <div>
-        <div>
-        <Header isMain={isMain} title={title} />
-        {header}
-      </div>
-    <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
+          <Header isMain={isMain} title={title} />
+          {header}
+        </div>
+        <div
+          className={styles.container}
+        >
 
-        {children}
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+          {children}
+          <footer>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </footer>
+        </div>
       </div>
     )
   }
