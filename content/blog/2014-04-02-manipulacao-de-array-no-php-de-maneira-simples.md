@@ -37,11 +37,11 @@ você pode encontrar no site do **[CakePHP][CakePHP_Hash]**. Para utilizar
 essa _class_ você importala no projeto e seguir a orientação da
 documentação do **[CakePHP][CakePHP_Hash]**.
 
-**[GitHub][my_GitHub]**: [github.com/{{ site.github_username }}/Hash][GitHub_Hash]
+**[GitHub][my_GitHub]**: [github.com/RodolfoSilva/Hash][GitHub_Hash]
 
 Deixe o seu comentário abaixo com a sua opinião sobre este pequeno artigo.
 
-[my_GitHub]: https://github.com/{{ site.github_username }}/ "Rodolfo Silva"
-[GitHub_Hash]: https://github.com/{{ site.github_username }}/Hash "Class Hash"
+[my_GitHub]: https://github.com/RodolfoSilva/ "Rodolfo Silva"
+[GitHub_Hash]: https://github.com/RodolfoSilva/Hash "Class Hash"
 [CakePHP_Hash]: http://cakephp.org/ "Hash do CakePHP"
 [class Hash]: http://book.cakephp.org/2.0/en/core-utility-libraries/hash.html "Hash do CakePHP"

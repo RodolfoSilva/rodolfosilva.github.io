@@ -21,7 +21,14 @@ criar o cadastro de categorias onde estas categorias teriam subcategorias e em
 um de seus campos seria para referenciar a outra categoria PAI, então criei o
 seguinte model.
 
-{% gist RodolfoSilva/9a7e02a23268ed8f5c32 %}
+```python{numberLines: true}
+from django.db import models
+
+class Categoria(models.Model):
+    nome = models.CharField(max_length=200)
+    slug = models.SlugField(unique=True, blank=True, null=True)
+    parent = models.ForeignKey('self', blank=True, null=True, related_name='child') 
+```
 
 Porém quando eu ia no administrador do Django para poder cadastrar as
 categorias e subcategorias o mesmo listava as categorias e subcategorias no
@@ -32,7 +39,15 @@ e comecei a destrinchar, então acabei descobrindo que eu poderia manipular os
 campos do formulário do administrador criados dinamicamente pelo django.<br>
 Então adicionei uma nova classe no meu arquivo **admin.py**.
 
-{% gist RodolfoSilva/2e47b48d118bd49362f9 %}
+```python{numberLines: true}
+from django import forms
+from .models import Categoria
+
+class CategoriaForm(forms.ModelForm):
+    class Meta:
+        model = Categoria
+        fields = '__all__'
+```
 
 Nesta classe até então ela não modifica muita coisa no comportamento do Django,
 ela está apenas criando um formulário para o model **Categoria **carregando
@@ -41,13 +56,59 @@ categorias que o valor do **parent** seja nulo. Então definir uma nova função
 para retornar estas categorias e sobrescrever o método de inicialização da
 classe ficando da seguinte forma.
 
-{% gist RodolfoSilva/8ec913cecf95cca53613 %}
+```python{numberLines: true}
+from django import forms
+from django.contrib import admin
+from .models import Categoria
+
+class CategoriaForm(forms.ModelForm):
+    class Meta:
+        model = Categoria
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(CategoriaForm, self).__init__(*args, **kwargs)
+        self.fields['parent'].choices = categoria_pai_as_choices()
+        
+def categoria_pai_as_choices():
+    categorias = []
+    categorias.append(['', '-----------'])
+    for categoria in Categoria.objects.filter(parent=None).all():
+        categorias.append([categoria.id, categoria.nome])
+    return categorias
+```
 
 Pronto, agora precisamos apenas dizer ao Django para utilizar este formulário
 para manipulação dos dados da categoria. Então devemos criar mais uma classe
 para criar um novo modelo para administração registrar ele no Django.
 
-{% gist RodolfoSilva/539f7fb9040a94e7e3fe %}
+```python{numberLines: true}
+from django import forms
+from django.contrib import admin
+from .models import Categoria
+
+class CategoriaForm(forms.ModelForm):
+    class Meta:
+        model = Categoria
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(CategoriaForm, self).__init__(*args, **kwargs)
+        self.fields['parent'].choices = categoria_pai_as_choices()
+
+""" Retorna todas as categorias sem um parent definido """
+def categoria_pai_as_choices():
+    categorias = []
+    categorias.append(['', '-----------'])
+    for categoria in Categoria.objects.filter(parent=None).all():
+        categorias.append([categoria.id, categoria.nome])
+    return categorias
+
+class CategoriaAdmin(admin.ModelAdmin):
+    form = CategoriaForm 
+
+admin.site.register(Categoria, CategoriaAdmin)
+```
 
 Pronto, agora podemos criar categorias e subcategorias utilizando apenas uma
 tabela e gerenciando pelo painel de administração do Django.

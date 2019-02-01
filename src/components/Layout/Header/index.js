@@ -45,6 +45,7 @@ function Header ({ title, isMain }) {
                 }}
               />
               <p>
+                <br />
                 <strong>{author}</strong> Engenheiro de software na agilize.com.br.
                 {` `}
                 <br />

@@ -30,15 +30,59 @@ aplicação ou um novo módulo. Se fossemos criá-lo apenas para ser executado
 pelo Node.js criaríamos um arquivo chamado "`utilitarios.js`" com o seguinte
 conteúdo:
 
-{% gist RodolfoSilva/387dcba96b8a85cbd9e2 %}
+```javascript{numberLines: true}
+var Utilitarios = (function() {
+  var Utilitarios = function(options) {
+  };
+ 
+  Utilitarios.prototype.isNull = function(obj) {
+    return obj === null;
+  };
+ 
+  Utilitarios.prototype.isUndefined = function(obj) {
+    return obj === void 0;
+  };
+ 
+  return Utilitarios;
+})();
+
+module.exports = Utilitarios;
+```
 
 E depois acessaríamos este módulo utilizando a função `require()`:
 
-{% gist RodolfoSilva/682849ae6a11dcb68913 %}
+```javascript{numberLines: true}
+var Utilitarios = require('./utilitarios'),
+    util        = new Utilitarios(),
+    saldo       = null;
+
+if (util.isNull(saldo)) {
+  console.log("Seu saldo é 0");
+}
+```
 
 Para usá-lo no cliente o que pode ser feito da seguinte maneira:
 
-{% gist RodolfoSilva/555db4570c7b15a877fa %}
+```html{numberLines: true}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Minha aplicação</title>
+        <script src="utilitarios.js"></script>
+        <script>
+            var util  = new Utilitarios(),
+                saldo = null;
+            if (util.isNull(saldo)) {
+                alert("Seu saldo é 0");
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
+```
 
 O código acima lançara um erro dizendo que a variável `module` utilizada em
 `utilitarios.js` não foi definida. Porém o objeto `Utilitarios` é exportado ao
@@ -53,19 +97,78 @@ disso para ocultamos as informações devemos envolver todas as informações
 dentro de uma função autoexecutável. No final o código do módulo resultante
 seria semelhante a este:
 
-{% gist RodolfoSilva/1608d937afd0fb142ad1 %}
+
+```javascript{numberLines: true}
+(function() {
+  var Utilitarios = (function() {
+    var Utilitarios = function(options) {
+    };
+   
+    Utilitarios.prototype.isNull = function(obj) {
+      return obj === null;
+    };
+   
+    Utilitarios.prototype.isUndefined = function(obj) {
+      return obj === void 0;
+    };
+   
+    return Utilitarios;
+  })();
+
+  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = Utilitarios;
+  } else {
+    window.Utilitarios = Utilitarios;
+  }
+})();
+```
 
 Caso você queira que seu modulo ofereça suporte a **[AMD][AMD]** modifique o
 bloco de exportação por esta forma:
 
-{% gist RodolfoSilva/08c53c37cdd0765e97a8 %}
+```javascript{numberLines: true}
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+  module.exports = Utilitarios;
+} else if (typeof define === 'function' && define.amd) {
+  define([], function() {
+    return Utilitarios;
+  });
+} else {
+  window.Utilitarios = Utilitarios;
+}
+```
 
 No **[Schedulejs][Schedulejs]** eu estou utilizando estas técnicas porém um
 pouco diferente baseando-se no método adotado pela comunidade de
 desenvolvimento do Backbonejs e Jquery.
 
-{% gist RodolfoSilva/019eb3f2b5e8d163885c %}
+```javascript{numberLines: true}
+(function( global, factory ) {
+  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = factory(global);
+  } else if (typeof define === 'function' && define.amd) {
+    define([], function() {
+      return factory(global);
+    });
+  } else {
+    global.Utilitarios = factory(global);
+  }
+}(typeof window !== 'undefined' ? window : this, function( window ) {
+  var Core = function(options) {
+  };
+ 
+  Core.prototype.isNull = function(obj) {
+    return obj === null;
+  };
+ 
+  Core.prototype.isUndefined = function(obj) {
+    return obj === void 0;
+  };
+ 
+  return Core;
+}));
+```
 
 
 [AMD]: http://en.wikipedia.org/wiki/Asynchronous_module_definition "Definição de módulo Assíncrono(Asynchronous module definition)"
-[Schedulejs]: https://github.com/{{ site.github_username }}/schedulejs "Agendador de tarefas"
+[Schedulejs]: https://github.com/RodolfoSilva/schedulejs "Agendador de tarefas"

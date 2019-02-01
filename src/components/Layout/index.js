@@ -1,5 +1,6 @@
 import React from 'react'
-
+import"prismjs/plugins/line-numbers/prism-line-numbers.css";
+import"../../styles/global.css";
 import { rhythm } from '../../utils/typography'
 import Header from './Header'
 import styles from './styles.module.css'
