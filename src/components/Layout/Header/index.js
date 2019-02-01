@@ -1,6 +1,8 @@
 import React from 'react'
 import { graphql, Link, StaticQuery } from 'gatsby'
 import styles from './styles.module.css'
+import GitHubIcon from '../../GithubIcon';
+import TwitterIcon from '../../TwitterIcon';
 
 function Header ({ isMain }) {
   return (
@@ -24,10 +26,10 @@ function Header ({ isMain }) {
                     <Link to="/curriculo">Currículo</Link>
                   </li>
                   <li>
-                    <Link to="/github">GitHub</Link>
+                    <a href={`https://github.com/${social.github}`} target="_blank" rel="noreferrer noopener" title="GitHub"><GitHubIcon /></a>
                   </li>
                   <li>
-                    <Link to="/twitter">Twitter</Link>
+                    <a href={`https://twitter.com/${social.twitter}`} target="_blank" rel="noreferrer noopener" title="Twitter"><TwitterIcon /></a>
                   </li>
                 </ul>
               </nav>
@@ -50,7 +52,7 @@ function Header ({ isMain }) {
                   <strong>{author}</strong> Engenheiro de software na agilize.com.br.
                   {` `}
                   <br />
-                  <a href={`https://twitter.com/${social.twitter}`}>
+                  <a href={`https://twitter.com/${social.twitter}`} target="_blank" rel="noreferrer noopener" title="Twitter">
                     Siga-me no Twitter
                   </a>
                 </p>

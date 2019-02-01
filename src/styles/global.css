@@ -1,6 +1,10 @@
 body {
   font-family: Montserrat, sans-serif;
 }
+
+body a {
+  color: #484389;
+}
 /**
  * If you already use line highlighting
  */
@@ -17,7 +21,7 @@ body {
 .gatsby-highlight {
   background-color: #272822;
   border-radius: 0.3em;
-  margin: 0.5em 0;
+  margin: 0 0 1.75rem;
   padding: 1em;
   overflow: auto;
 }

@@ -1,12 +1,19 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
+import { DiscussionEmbed } from "disqus-react";
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
 
-function BlogPostTemplate ({ location, data: { markdownRemark: post }, pageContext: { previous, next } }) {
+function BlogPostTemplate ({ location, data: { markdownRemark: post }, pageContext: { previous, next, slug } }) {
+  const disqusShortname = "rodolfosilva";
+
+  const disqusConfig = {
+    url: `https://rodolfosilva.com${slug}`,
+    title: post.frontmatter.title,
+  };
+
   return (
     <Layout location={location}>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
@@ -53,6 +60,8 @@ function BlogPostTemplate ({ location, data: { markdownRemark: post }, pageConte
           )}
         </li>
       </ul>
+
+      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
     </Layout>
   )
 }
