@@ -5,6 +5,10 @@ body {
 body a {
   color: #484389;
 }
+
+* {
+  box-sizing: border-box;
+}
 /**
  * If you already use line highlighting
  */

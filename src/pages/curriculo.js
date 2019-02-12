@@ -5,6 +5,8 @@ import ProfessionalExperience from '../components/ProfessionalExperience'
 import ExtracurricularKnowledge from '../components/ExtracurricularKnowledge'
 import styles from './curriculo.module.css'
 import { MyAge } from '../components/MyAge'
+import { Timeline } from '../components/Timeline'
+import { Item } from '../components/Timeline/Item'
 
 const CurriculoPage = (props) => (
   <Layout location={props.location}>
@@ -32,11 +34,11 @@ const CurriculoPage = (props) => (
       </div>
     </div>
 
-    <h3 id="objetivo">Objetivo</h3>
+    <h2 className={styles.subTitle} id="objetivo">Objetivo</h2>
 
     <p>Desenvolvedor Sênior</p>
 
-    <h3 id="formação-acadêmica">Formação acadêmica</h3>
+    <h2 className={styles.subTitle} id="formação-acadêmica">Formação acadêmica</h2>
 
     <ul>
       <li>Graduado em Sistemas da Informação
@@ -53,7 +55,7 @@ const CurriculoPage = (props) => (
       </li>
     </ul>
 
-    <h3 id="conhecimentos-extracurriculares">Conhecimentos extracurriculares</h3>
+    <h2 className={styles.subTitle} id="conhecimentos-extracurriculares">Conhecimentos extracurriculares</h2>
 
     <ul>
       <li>
@@ -82,66 +84,57 @@ const CurriculoPage = (props) => (
       </li>
     </ul>
 
-    <h3 id="experiência-profissional">Experiência profissional</h3>
+    <h2 className={styles.subTitle} id="experiência-profissional">Experiência profissional</h2>
 
-    <ul>
-      <li>
-        <ProfessionalExperience
-          company='Agilize - Contabilidade Online'
-          period={['2016-07-01T03:00:00.000Z']}
-          role='Software engineer'
-        />
-      </li>
-      <li>
-        <ProfessionalExperience
-          company="Capgemini"
-          period={['2015-06-06T03:00:00.000Z', '2016-07-01T02:59:59.000Z']}
-          role="Consultor de Tecnologia"
-        />
-      </li>
-      <li>
-        <ProfessionalExperience
-          company='EEEMBA - Escola de Engenharia Eletromecânica Bahia'
-          period={['2014-08-06T03:00:00.000Z', '2015-06-29T02:59:59.000Z']}
-          role='Programador'
-        />
-      </li>
-      <li>
-        <ProfessionalExperience
-          company=".COMPOS"
-          period={['2012-11-23T03:00:00.000Z', '2014-08-06T02:59:59.000Z']}
-          role="Programador"
-        />
-      </li>
-      <li>
-        <ProfessionalExperience
-          company='JCL – Tecnologia'
-          period={['2012-07-11T03:00:00.000Z', '2012-11-18T02:59:59.000Z']}
-          role='Programador'
-        />
-      </li>
-      <li>
-        <ProfessionalExperience
-          company="EEEMBA - Escola de Engenharia Eletromecânica Bahia"
-          period={['2011-01-07T03:00:00.000Z', '2012-07-11T02:59:59.000Z']}
-          role="Programador"
-        />
-      </li>
-      <li>
-        <ProfessionalExperience
-          company='MegaDesign'
-          period={['2009-11-01T03:00:00.000Z', '2011-01-01T02:59:59.000Z']}
-          role='Programador'
-        />
-      </li>
-      <li>
-        <ProfessionalExperience
-          company="Empacser Soft"
-          period={['2008-01-01T03:00:00.000Z', '2009-01-01T02:59:59.000Z']}
-          role="Programador"
-        />
-      </li>
-    </ul>
+    <Timeline>
+      <Item
+        title="Agilize - Contabilidade Online"
+        subTitle="Software engineer"
+        startAt="2016-07-01T03:00:00.000Z"
+      />
+      <Item
+        title="Capgemini"
+        subTitle="Consultor de Tecnologia"
+        startAt="2015-06-06T03:00:00.000Z"
+        endAt="2016-07-01T02:59:59.000Z"
+      />
+      <Item
+        title="EEEMBA - Escola de Engenharia Eletromecânica Bahia"
+        subTitle="Programador"
+        startAt="2014-08-06T03:00:00.000Z"
+        endAt="2015-06-29T02:59:59.000Z"
+      />
+      <Item
+        title=".COMPOS"
+        subTitle="Programador"
+        startAt="2012-11-23T03:00:00.000Z"
+        endAt="2014-08-06T02:59:59.000Z"
+      />
+      <Item
+        title="JCL – Tecnologia"
+        subTitle="Programador"
+        startAt="2012-07-11T03:00:00.000Z"
+        endAt="2012-11-18T02:59:59.000Z"
+      />
+      <Item
+        title="EEEMBA - Escola de Engenharia Eletromecânica Bahia"
+        subTitle="Programador"
+        startAt="2011-01-07T03:00:00.000Z"
+        endAt="2012-07-11T02:59:59.000Z"
+      />
+      <Item
+        title="MegaDesign"
+        subTitle="Programador"
+        startAt="2009-11-01T03:00:00.000Z"
+        endAt="2011-01-01T02:59:59.000Z"
+      />
+      <Item
+        title="Empacser Soft"
+        subTitle="Programador"
+        startAt="2008-01-01T03:00:00.000Z"
+        endAt="2009-01-01T02:59:59.000Z"
+      />
+    </Timeline>
   </Layout>
 )
 
