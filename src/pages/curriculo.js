@@ -1,26 +1,36 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import ProfessionalExperience from '../components/ProfessionalExperience'
 import ExtracurricularKnowledge from '../components/ExtracurricularKnowledge'
+import styles from './curriculo.module.css'
+import { MyAge } from '../components/MyAge'
 
 const CurriculoPage = (props) => (
   <Layout location={props.location}>
     <SEO title="Currículo" />
     <h1>Rodolfo da Silva Santos</h1>
 
-    <p>
-      Brasileiro, Casado, {~~(Date.now() / 31557600000 - 22.847592972849647)} anos Salvador - BA
-    </p>
+    <div>
+      Brasileiro, Casado, <MyAge /> anos Salvador - BA
+    </div>
 
-    <p>
-      <strong>Celular:</strong> +55 71 98366-1106<br />
-      <strong>E­mail:</strong> contato@rodolfosilva.com<br />
-      <strong>Web:</strong> <a href="http://rodolfosilva.com">rodolfosilva.com</a><br />
-      <strong>GitHub:</strong> <a href="https://github.com/RodolfoSilva">github.com/RodolfoSilva</a>
-    </p>
+    <br />
+
+    <div>
+      <div className={styles.contactNumber}>
+        <strong>Celular:</strong>{' '}<span>+55 71 98366-1106</span>
+      </div>
+      <div>
+        <strong>E­mail:</strong>{' '}<span>contato@rodolfosilva.com</span>
+      </div>
+      <div>
+        <strong>Web:</strong>{' '}<a href='http://rodolfosilva.com'>rodolfosilva.com</a>
+      </div>
+      <div>
+        <strong>GitHub:</strong>{' '}<a href='https://github.com/RodolfoSilva'>github.com/RodolfoSilva</a>
+      </div>
+    </div>
 
     <h3 id="objetivo">Objetivo</h3>
 
@@ -48,8 +58,8 @@ const CurriculoPage = (props) => (
     <ul>
       <li>
         <ExtracurricularKnowledge
-          title="Linguagens de programação"
-          description="PHP, Python, JavaScript, Java, Node.js, HTML, CSS"
+          title='Linguagens de programação'
+          description='PHP, Python, JavaScript, Java, Node.js, HTML, CSS'
         />
       </li>
       <li>
@@ -60,44 +70,14 @@ const CurriculoPage = (props) => (
       </li>
       <li>
         <ExtracurricularKnowledge
-          title="IDE"
-          description="VS Code, Atom, Sublime Text, VIM, PyCharm"
-        />
-      </li>
-      <li>
-        <ExtracurricularKnowledge
-          title="Banco de Dados"
-          description="PostgreSQL, MariaDB/MySQL, SQLite, MongoDB"
+          title='Banco de Dados'
+          description='PostgreSQL, MariaDB/MySQL, SQLite, MongoDB'
         />
       </li>
       <li>
         <ExtracurricularKnowledge
           title="Frameworks/Bibliotecas"
           description="Flask, Django, CodeIgniter, CakePHP, React, React Native, Ionic, Ionic 2, Bootstrap, Express, Angular 2, Angular.js, jQuery, Jinja2/Twig/Swig"
-        />
-      </li>
-      <li>
-        <ExtracurricularKnowledge
-          title="Sistema Operacional"
-          description="Linux"
-        />
-      </li>
-      <li>
-        <ExtracurricularKnowledge
-          title="Gestor de Projetos"
-          description="Jira, Redmine, Stash, GitLab, GitHub, Bitbucket"
-        />
-      </li>
-      <li>
-        <ExtracurricularKnowledge
-          title="Controle de Versão"
-          description="GIT, Subversion"
-        />
-      </li>
-      <li>
-        <ExtracurricularKnowledge
-          title="Ferramentas de Teste"
-          description="unittest(Python), PHPUnit, jest, jasmine, karma"
         />
       </li>
     </ul>
@@ -107,63 +87,61 @@ const CurriculoPage = (props) => (
     <ul>
       <li>
         <ProfessionalExperience
-          company="Agilize - Contabilidade Online"
-          period="desde Julho de 2016"
-          role="Software engineer"
+          company='Agilize - Contabilidade Online'
+          period={['2016-07-01T03:00:00.000Z']}
+          role='Software engineer'
         />
       </li>
       <li>
         <ProfessionalExperience
           company="Capgemini"
-          period="de Julho de 2015 à Junho de 2016"
+          period={['2015-06-06T03:00:00.000Z', '2016-07-01T02:59:59.000Z']}
           role="Consultor de Tecnologia"
         />
       </li>
       <li>
         <ProfessionalExperience
-          company="EEEMBA - Escola de Engenharia Eletromecânica Bahia"
-          period="de Agosto de 2014 à Junho de 2015"
-          role="Programador"
+          company='EEEMBA - Escola de Engenharia Eletromecânica Bahia'
+          period={['2014-08-06T03:00:00.000Z', '2015-06-29T02:59:59.000Z']}
+          role='Programador'
         />
       </li>
       <li>
         <ProfessionalExperience
           company=".COMPOS"
-          period="de Novembro de 2012 a Agosto de 2014"
+          period={['2012-11-23T03:00:00.000Z', '2014-08-06T02:59:59.000Z']}
           role="Programador"
         />
       </li>
       <li>
         <ProfessionalExperience
-          company="JCL – Tecnologia"
-          period="de Julho de 2012 a Novembro de 2012"
-          role="Programador"
+          company='JCL – Tecnologia'
+          period={['2012-07-11T03:00:00.000Z', '2012-11-18T02:59:59.000Z']}
+          role='Programador'
         />
       </li>
       <li>
         <ProfessionalExperience
           company="EEEMBA - Escola de Engenharia Eletromecânica Bahia"
-          period="de Janeiro de 2011 a Julho de 2012 (Estagio/CLT)"
+          period={['2011-01-07T03:00:00.000Z', '2012-07-11T02:59:59.000Z']}
           role="Programador"
         />
       </li>
       <li>
         <ProfessionalExperience
-          company="MegaDesign"
-          period="de Novembro de 2009 a Dezembro de 2010"
-          role="Programador"
+          company='MegaDesign'
+          period={['2009-11-01T03:00:00.000Z', '2011-01-01T02:59:59.000Z']}
+          role='Programador'
         />
       </li>
       <li>
         <ProfessionalExperience
           company="Empacser Soft"
-          period="2008"
+          period={['2008-01-01T03:00:00.000Z', '2009-01-01T02:59:59.000Z']}
           role="Programador"
         />
       </li>
     </ul>
-
-    <Link to="/">Ir para página inicial</Link>
   </Layout>
 )
 

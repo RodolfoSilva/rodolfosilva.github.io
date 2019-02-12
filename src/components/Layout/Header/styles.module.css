@@ -7,6 +7,12 @@
   color: #FFF;
 }
 
+@media print {
+  .container {
+    display: none;
+  }
+}
+
 .container a {
   color: #FFF;
   opacity: .5;
