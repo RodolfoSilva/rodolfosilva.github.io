@@ -2,6 +2,8 @@
 
 .subTitle {
   font-size: 21px;
-  margin: 5px 0 25px;
+  margin: 0;
+  padding: 25px 0;
+  border-bottom: 1px solid #F5F5F5;
   font-family: Montserrat, sans-serif;
 }
