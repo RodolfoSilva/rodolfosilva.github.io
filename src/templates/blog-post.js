@@ -36,6 +36,11 @@ function BlogPostTemplate ({ location, data: { markdownRemark: post }, pageConte
               {post.frontmatter.dateFormatted}
             </time>
           </div>
+        </header>
+        <section itemProp="text">
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </section>
+        <footer>
           <hr
             style={{
               marginBottom: rhythm(1),
@@ -47,10 +52,7 @@ function BlogPostTemplate ({ location, data: { markdownRemark: post }, pageConte
               marginBottom: rhythm(1),
             }}
           />
-        </header>
-        <section itemProp="text">
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </section>
+        </footer>
       </article>
 
       <ul
