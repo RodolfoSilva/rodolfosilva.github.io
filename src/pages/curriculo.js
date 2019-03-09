@@ -40,49 +40,36 @@ const CurriculoPage = (props) => (
 
     <h2 className={styles.subTitle} id="formação-acadêmica">Formação acadêmica</h2>
 
-    <ul>
-      <li>Graduado em Sistemas da Informação
-        <ul>
-          <li>Faculdade Ruy Barbosa</li>
-          <li>Concluído em 2017</li>
-        </ul>
-      </li>
-      <li>Técnico em Tecnologia da Informação
-        <ul>
-          <li>EEEMBA - Escola de Engenharia Eletromecânica da Bahia</li>
-          <li>Concluído em 2011</li>
-        </ul>
-      </li>
-    </ul>
+    <Timeline>
+      <Item
+        title="Graduado em Sistemas da Informação"
+        subTitle="Faculdade Ruy Barbosa"
+        startAt="2012-01-01T03:00:00.000Z"
+        endAt="2017-07-01T03:00:00.000Z"
+      />
+      <Item
+        title="Técnico em Tecnologia da Informação"
+        subTitle="EEEMBA - Escola de Engenharia Eletromecânica da Bahia"
+        startAt="2011-01-01T03:00:00.000Z"
+        endAt="2011-12-31T02:59:59.000Z"
+      />
+    </Timeline>
 
     <h2 className={styles.subTitle} id="conhecimentos-extracurriculares">Conhecimentos extracurriculares</h2>
-
-    <ul>
-      <li>
-        <ExtracurricularKnowledge
-          title='Linguagens de programação'
-          description='PHP, Python, JavaScript, Java, Node.js, HTML, CSS'
-        />
-      </li>
-      <li>
-        <ExtracurricularKnowledge
-          title="Pré-processadores"
-          description="SASS, LESS"
-        />
-      </li>
-      <li>
-        <ExtracurricularKnowledge
-          title='Banco de Dados'
-          description='PostgreSQL, MariaDB/MySQL, SQLite, MongoDB'
-        />
-      </li>
-      <li>
-        <ExtracurricularKnowledge
-          title="Frameworks/Bibliotecas"
-          description="Flask, Django, CodeIgniter, CakePHP, React, React Native, Ionic, Ionic 2, Bootstrap, Express, Angular 2, Angular.js, jQuery, Jinja2/Twig/Swig"
-        />
-      </li>
-    </ul>
+    <Timeline>
+      <Item  title="Linguagens de programação">
+        PHP, Python, JavaScript, Java, Node.js, HTML, CSS
+      </Item>
+      <Item  title="Pré-processadores">
+        SASS, LESS
+      </Item>
+      <Item  title="Banco de Dados">
+        PostgreSQL, MariaDB/MySQL, SQLite, MongoDB
+      </Item>
+      <Item  title="Frameworks/Bibliotecas">
+        Flask, Django, CodeIgniter, CakePHP, React, React Native, Ionic, Ionic 2, Bootstrap, Express, Angular 2, Angular.js, jQuery, Jinja2/Twig/Swig
+      </Item>
+    </Timeline>
 
     <h2 className={styles.subTitle} id="experiência-profissional">Experiência profissional</h2>
 
