@@ -11,7 +11,7 @@ function Header ({ isMain }) {
       render={data => {
         const { author, social, title } = data.site.siteMetadata
         return (
-          <div className={styles.container}>
+          <header className={styles.container}>
             <div className={styles.navbar}>
               <Link
                 className={styles.brand}
@@ -58,7 +58,7 @@ function Header ({ isMain }) {
                 </p>
               </div>
             )}
-          </div>
+          </header>
         )
       }}
     />

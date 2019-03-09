@@ -1,40 +1,57 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { DiscussionEmbed } from "disqus-react";
+import { DiscussionEmbed } from 'disqus-react'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
 
 function BlogPostTemplate ({ location, data: { markdownRemark: post }, pageContext: { previous, next, slug } }) {
-  const disqusShortname = "rodolfosilva";
+  const disqusShortname = 'rodolfosilva'
 
   const disqusConfig = {
     url: `https://rodolfosilva.com${slug}`,
     title: post.frontmatter.title,
-  };
+  }
 
   return (
     <Layout location={location}>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <h1>{post.frontmatter.title}</h1>
-      <p
-        style={{
-          ...scale(-1 / 5),
-          display: `block`,
-          marginBottom: rhythm(1),
-          marginTop: rhythm(-1),
-        }}
-      >
-        {post.frontmatter.date}
-      </p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
-      <Bio />
+
+      <article itemType="https://schema.org/BlogPosting" itemScope>
+        <header>
+          <Link to={slug} itemProp="url">
+            <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          </Link>
+
+          <div
+            style={{
+              ...scale(-1 / 5),
+              display: `block`,
+              marginBottom: rhythm(1),
+              marginTop: rhythm(-1),
+            }}
+          >
+            <time itemProp="datePublished" dateTime={post.frontmatter.date}>
+              {post.frontmatter.dateFormatted}
+            </time>
+          </div>
+          <hr
+            style={{
+              marginBottom: rhythm(1),
+            }}
+          />
+          <Bio />
+          <hr
+            style={{
+              marginBottom: rhythm(1),
+            }}
+          />
+        </header>
+        <section itemProp="text">
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </section>
+      </article>
 
       <ul
         style={{
@@ -76,7 +93,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        dateFormatted: date(formatString: "MMMM DD, YYYY")
+        date 
       }
     }
   }

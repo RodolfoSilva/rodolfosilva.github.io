@@ -13,12 +13,15 @@ function Bio() {
           <div
             style={{
               display: `flex`,
-              marginBottom: rhythm(2.5),
             }}
+            itemProp="author"
+            itemScope
+            itemType="https://schema.org/Person"
           >
           <img
             src={`https://github.com/${social.github}.png?size=50`}
             alt={author}
+            itemProp="image"
             style={{
               marginRight: rhythm(1 / 2),
               marginBottom: 0,
@@ -28,9 +31,9 @@ function Bio() {
             }}
           />
             <p>
-              <strong>{author}</strong> Engenheiro de software na agilize.com.br.
+              <strong itemProp="name">{author}</strong><br />Engenheiro de software na agilize.com.br.
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
+              <a href={`https://twitter.com/${social.twitter}`} itemProp="url">
                 Siga-me no Twitter
               </a>
             </p>
