@@ -10,7 +10,11 @@ import { Item } from '../components/Timeline/Item'
 
 const CurriculoPage = (props) => (
   <Layout location={props.location}>
-    <SEO title="Currículo" />
+    <SEO 
+      title="Currículo" 
+      keywords={['react', 'javascript', 'python', 'resume', 'software enginier', 'engenheiro de software']}
+      description="Graduado em Sistemas da Informação. Atuando como desenvolvedor de Software desde os 14 anos. Atualmente trabalhando como Engenheiro de Software na Agilize Contabilidade Online."
+    />
     <h1>Rodolfo da Silva Santos</h1>
 
     <div>
@@ -58,7 +62,7 @@ const CurriculoPage = (props) => (
     <h2 className={styles.subTitle} id="conhecimentos-extracurriculares">Conhecimentos extracurriculares</h2>
     <Timeline>
       <Item  title="Linguagens de programação">
-        PHP, Python, JavaScript, Java, Node.js, HTML, CSS
+      JavaScript, Node.js, TypeScript, PHP, GraphQL, Python, Java, HTML, CSS
       </Item>
       <Item  title="Pré-processadores">
         SASS, LESS
@@ -67,7 +71,7 @@ const CurriculoPage = (props) => (
         PostgreSQL, MariaDB/MySQL, SQLite, MongoDB
       </Item>
       <Item  title="Frameworks/Bibliotecas">
-        Flask, Django, CodeIgniter, CakePHP, React, React Native, Ionic, Ionic 2, Bootstrap, Express, Angular 2, Angular.js, jQuery, Jinja2/Twig/Swig
+        React, React Native, TypeORM, TypeGraphQL, Flask, Django, CodeIgniter, Typo3FLOW/NeosFLOW, Bootstrap, Express, jQuery
       </Item>
     </Timeline>
 
