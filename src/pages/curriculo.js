@@ -79,9 +79,15 @@ const CurriculoPage = (props) => (
 
     <Timeline>
       <Item
+        title="Infleet"
+        subTitle="Software engineer"
+        startAt="2020-01-01T03:00:00.000Z"
+      />
+      <Item
         title="Agilize - Contabilidade Online"
         subTitle="Software engineer"
         startAt="2016-07-01T03:00:00.000Z"
+        endAt="2019-12-31T02:59:59.000Z"
       />
       <Item
         title="Capgemini"
