@@ -11,6 +11,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     'gatsby-plugin-slug',
     {
       resolve: `gatsby-source-filesystem`,
@@ -74,11 +75,12 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at rodolfosilva.com. You can read it online by <a href="${siteUrl +
-                edge.node.fields.slug}">clicking here</a>.)</div>
+                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at rodolfosilva.com. You can read it online by <a href="${
+                  siteUrl + edge.node.fields.slug
+                }">clicking here</a>.)</div>
               `;
 
                 let html = edge.node.html;
@@ -120,7 +122,7 @@ module.exports = {
               }
             `,
             output: '/feed.xml',
-            title: "Rodolfo Silva Blog RSS Feed",
+            title: 'Rodolfo Silva Blog RSS Feed',
           },
         ],
       },
@@ -146,4 +148,4 @@ module.exports = {
       },
     },
   ],
-}
+};
