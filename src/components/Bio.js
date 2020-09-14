@@ -31,7 +31,7 @@ function Bio() {
             }}
           />
             <p>
-              <strong itemProp="name">{author}</strong><br />Engenheiro de software na agilize.com.br.
+              <strong itemProp="name">{author}</strong><br />Engenheiro de software na infleet.com.br.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`} itemProp="url">
                 Siga-me no Twitter
