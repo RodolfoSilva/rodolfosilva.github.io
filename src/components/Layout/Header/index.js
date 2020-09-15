@@ -49,7 +49,7 @@ function Header ({ isMain }) {
                 />
                 <p>
                   <br />
-                  <strong>{author}</strong> Engenheiro de software na agilize.com.br.
+                  <strong>{author}</strong> Engenheiro de software na infleet.com.br.
                   {` `}
                   <br />
                   <a href={`https://twitter.com/${social.twitter}`} target="_blank" rel="noreferrer noopener" title="Twitter">
