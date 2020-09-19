@@ -7,14 +7,15 @@ permalink: /wordpress/criando-painel-de-administracao-seu-theme-em-wordpress/att
 published: false
 status: private
 categories:
-- Tutorial
-- WordPress
+  - Tutorial
+  - WordPress
 tags: []
 meta:
   _edit_last: '1'
   _thumbnail_id: '105'
   _yoast_wpseo_focuskw: Criando painel de administração
-  _yoast_wpseo_metadesc: Criando painel de administração para o seu tema em WordPress,
+  _yoast_wpseo_metadesc:
+    Criando painel de administração para o seu tema em WordPress,
     adicionando os campos personalizados para cadastrar as opções.
   _yoast_wpseo_linkdex: '68'
 author:
@@ -24,8 +25,27 @@ author:
   first_name: Rodolfo
   last_name: Silva
 ---
-<p>Dando sequencia ao tutorial <a title="Criando painel de administração do seu tema em WordPress" href="http://rodolfosilva.com/wordpress/criando-painel-de-administracao-seu-theme-em-wordpress/">Criando painel de administração do seu tema em WordPress</a> onde eu explico como criar a opção de menu e uma tela simples, hoje vamos adicionar os campos em nosso painel para que ele possa funcionar corretamente.</p>
-<p>Agora vamos continuar editando o <code>admin.php</code> criado anteriormente, para adicionarmos nossas opções. Vamos começar fazendo umas pequenas modificações em nossa classe adicionando atributos a ela para armazenar o nome/id do painel e o seu titulo ficando assim:</p>
+
+<p>
+  Dando sequencia ao tutorial
+  <a
+    title="Criando painel de administração do seu tema em WordPress"
+    href="http://rodolfosilva.com/wordpress/criando-painel-de-administracao-seu-theme-em-wordpress/"
+    >Criando painel de administração do seu tema em WordPress</a
+  >
+  onde eu explico como criar a opção de menu e uma tela simples, hoje vamos
+  adicionar os campos em nosso painel para que ele possa funcionar corretamente.
+</p>
+<p>
+  Agora vamos continuar editando o <code>admin.php</code> criado anteriormente,
+  para adicionarmos nossas opções. Vamos começar fazendo umas pequenas
+  modificações em nossa classe adicionando atributos a ela para armazenar o
+  nome/id do painel e o seu titulo ficando assim:
+</p>
 <p>[gist url="https://gist.github.com/RodolfoSilva/8fd0bb12039ed43a897e"]</p>
-<p>Agora vamos carregar as opções do tema quando a página de administração esta sendo renderizada adicionando a seguinte instrução dentro do método <code>theme_config_page</code>:</p>
+<p>
+  Agora vamos carregar as opções do tema quando a página de administração esta
+  sendo renderizada adicionando a seguinte instrução dentro do método
+  <code>theme_config_page</code>:
+</p>
 <p>[gist url="https://gist.github.com/RodolfoSilva/e3df03fb62377cac3b98"]</p>
