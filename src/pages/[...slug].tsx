@@ -34,7 +34,7 @@ const BlogPost = (props: Props) => {
   const disqusShortname = 'rodolfosilva';
 
   const disqusConfig = {
-    url: `https://rodolfosilva.com${post.slug}`,
+    url: `https://rodolfosilva.com/${post.slug}`,
     title: post.title,
   };
 
