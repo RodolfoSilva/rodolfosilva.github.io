@@ -14,6 +14,7 @@
     "start": "next start",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
+    "postbuild": "next-on-netlify",
     "lint": "eslint . --ext ts --ext tsx --ext js"
   },
   "dependencies": {
@@ -22,6 +23,7 @@
     "gray-matter": "^4.0.2",
     "highlight.js": "^10.2.0",
     "next": "9.5.3",
+    "next-on-netlify": "^2.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "remark": "^12.0.1",
