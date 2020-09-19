@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styles from './styles.module.css';
 import PeriodFormat from './PeriodFormat';
 
 interface TimeLineItemProps {
+  children?: ReactNode
   title: string;
   subTitle?: string;
   startAt?: string;
@@ -10,7 +11,7 @@ interface TimeLineItemProps {
 }
 
 export default function Item(
-  props: React.PropsWithChildren<TimeLineItemProps>
+  props: TimeLineItemProps
 ) {
   const { title, subTitle, startAt, endAt, children } = props;
 

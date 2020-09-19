@@ -6,37 +6,25 @@ import { getAllPosts, getPostByRealSlug } from '../lib/api';
 import markdownToHtml from '../lib/markdown-to-html';
 import { Post } from '../types';
 import Layout from '../components/Layout';
-import { DiscussionEmbed } from 'disqus-react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 import Bio from '../components/Bio';
+import Discussion from '../components/Discussion';
 
 interface Props {
-  post: Post
-  morePosts: Post[]
-  preview?: boolean
+  post: Post;
 }
 
-
-const BlogPost = (props: Props) => {
-  const { post, morePosts, preview } = props;
+export default function BlogPost(props: Props) {
+  const { post } = props;
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
 
-  console.log(preview, morePosts);
-
   if (router.isFallback) {
     return <h1>Loading…</h1>;
   }
-
-  const disqusShortname = 'rodolfosilva';
-
-  const disqusConfig = {
-    url: `https://rodolfosilva.com/${post.slug}`,
-    title: post.title,
-  };
 
   return (
     <Layout>
@@ -70,19 +58,16 @@ const BlogPost = (props: Props) => {
           <hr />
         </footer>
       </article>
-
-      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+      <Discussion title={post.title} path={post.slug} />
     </Layout>
   );
-};
+}
 
 type Params = {
   params: {
     slug: string[];
   };
 };
-
-export default BlogPost;
 
 export async function getStaticProps({ params }: Params) {
   const post = getPostByRealSlug(params.slug.join('/'), [

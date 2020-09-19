@@ -1,11 +1,13 @@
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Header from './Header';
 import styles from './styles.module.css';
 
-interface LayoutProps {}
+interface LayoutProps {
+  children?: ReactNode
+}
 
-export default function Layout(props: React.PropsWithChildren<LayoutProps>) {
+export default function Layout(props: LayoutProps) {
   const { children } = props;
 
   const router = useRouter();
