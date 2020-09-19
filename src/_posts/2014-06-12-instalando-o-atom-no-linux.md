@@ -86,7 +86,7 @@ LD_LIBRARY_PATH=/opt/google/chrome ~/apps/atom/share/atom.sh
 
 Você pode criar um lançador para executar este comando.
 
-```desktop
+```
 [Desktop Entry]
 Type=Application
 Name=Atom
