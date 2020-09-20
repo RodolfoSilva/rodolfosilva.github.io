@@ -192,7 +192,7 @@ export default function Menu() {
         <span className="sr-only">Abrir menu</span>
       </OpenMenuButton>
       <Navigation
-        aria-hidden={!isOpen || isDisplayLarge}
+        aria-hidden={isDisplayLarge ? false : !isOpen}
         isOpen={isOpen || isDisplayLarge}
       >
         <CloseMenuButton
