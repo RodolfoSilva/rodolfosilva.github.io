@@ -1,5 +1,4 @@
 import ErrorPage from 'next/error';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { getAllPosts, getPostByRealSlug } from '../lib/api';
@@ -28,10 +27,17 @@ export default function BlogPost(props: Props) {
 
   return (
     <Layout>
-      <SEO title={post.title} description={post.excerpt} />
-      <Head>
-        <meta property="og:image" content={post.ogImage} />
-      </Head>
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        keywords={post.keywords}
+        metaProperties={[
+          {
+            property: 'og:image',
+            content: post.ogImage,
+          },
+        ]}
+      />
 
       <article itemType="https://schema.org/BlogPosting" itemScope>
         <header>
@@ -74,6 +80,7 @@ export async function getStaticProps({ params }: Params) {
     'title',
     'date',
     'slug',
+    'keywords',
     'author',
     'content',
     'ogImage',

@@ -32,6 +32,13 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
       items[field] = content;
     }
 
+    if (field === 'keywords') {
+      items[field] = (data[field]?.split(',') ?? []).map((keyword) =>
+        keyword.trim()
+      );
+      return;
+    }
+
     if (data[field]) {
       items[field] =
         data[field] instanceof Date ? data[field].toISOString() : data[field];

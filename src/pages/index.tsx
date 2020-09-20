@@ -1,7 +1,7 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 import { getAllPosts } from '../lib/api';
 import { Post } from '../types';
 
@@ -12,14 +12,7 @@ type Props = {
 export default function Home({ allPosts }: Props) {
   return (
     <Layout>
-      <Head>
-        <title>Rodolfo Silva</title>
-      </Head>
-
-      {/* <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      /> */}
+      <SEO keywords={['blog', 'next', 'javascript', 'react']} />
       {allPosts.map((post) => {
         const title = post.title || post.slug;
         return (

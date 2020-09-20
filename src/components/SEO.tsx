@@ -1,35 +1,110 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Head from 'next/head';
-function SEO(props) {
+
+interface Meta {
+  name: string;
+  content: string;
+}
+
+interface MetaProperty {
+  property: string;
+  content: string;
+}
+
+interface SEOProps {
+  keywords?: string[];
+  description?: string;
+  lang?: string;
+  title?: string;
+  metas?: Meta[];
+  metaProperties?: MetaProperty[];
+}
+
+function dedupMetas(metas: Meta[]): Meta[] {
+  const map = new Map(metas.map(({ name, content }) => [name, content]));
+  return Array.from(map.entries()).map(([name, content]) => ({
+    name,
+    content,
+  }));
+}
+
+function dedupMetaProperties(metas: MetaProperty[]): MetaProperty[] {
+  const map = new Map(
+    metas.map(({ property, content }) => [property, content])
+  );
+  return Array.from(map.entries()).map(([property, content]) => ({
+    property,
+    content,
+  }));
+}
+
+export default function SEO(props: SEOProps) {
   const {
-    description: metaDescription = `Desenvolvedor apaixonado por novas tecnologias.`,
-    lang,
-    meta,
-    keywords,
+    description = `Desenvolvedor apaixonado por novas tecnologias.`,
+    metas: customMetas = [],
+    lang = `pt-BR`,
+    metaProperties: customMetaProperties = [],
+    keywords = [],
     title,
   } = props;
 
-  const metas = [
+  const siteName = 'Rodolfo Silva';
+
+  const titleSeparator = '|';
+
+  // @see https://tools.ietf.org/html/rfc7992#section-9.28
+  const keywordsMeta =
+    keywords.length > 0
+      ? [
+          {
+            name: `keywords`,
+            content: keywords.join(`,`),
+          },
+        ]
+      : [];
+
+  // @see https://ogp.me/
+  const openGraphMetaProperties = [
     {
-      property: ``,
+      property: `og:description`,
       content: title,
     },
     {
+      property: `og:site_name`,
+      content: siteName,
+    },
+    {
+      property: `og:locale`,
+      content: lang.replace('-', '_'),
+    },
+    {
       property: `og:description`,
-      content: metaDescription,
+      content: description,
     },
     {
       property: `og:type`,
       content: `website`,
     },
+  ];
+
+  const metaProperties = dedupMetaProperties([
+    ...openGraphMetaProperties,
+    ...customMetaProperties,
+  ]);
+
+  // @see https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup
+  const twitterMetas = [
     {
       name: `twitter:card`,
       content: `summary`,
     },
     {
+      name: `twitter:site`,
+      content: `ro_dolfosilva`,
+    },
+    {
       name: `twitter:creator`,
-      content: 'Rodolfo Silva',
+      content: `ro_dolfosilva`,
     },
     {
       name: `twitter:title`,
@@ -37,41 +112,23 @@ function SEO(props) {
     },
     {
       name: `twitter:description`,
-      content: metaDescription,
+      content: description,
     },
-  ]
-    .concat(
-      keywords.length > 0
-        ? {
-            name: `keywords`,
-            content: keywords.join(`, `),
-          }
-        : []
-    )
-    .concat(meta);
+  ];
+
+  const metas = dedupMetas([...twitterMetas, ...keywordsMeta, ...customMetas]);
 
   return (
     <Head>
-      <title>{title ? `${title} | ` : ''}Rodolfo Silva</title>
-      {metas.map((props, i) => (
-        <meta key={i} {...props} />
+      <title>{title ? `${title} ${titleSeparator} ${siteName}` : siteName}</title>
+
+      {metas.map(({ name, content }) => (
+        <meta key={name} name={name} content={content} />
+      ))}
+
+      {metaProperties.map(({ property, content }) => (
+        <meta key={property} property={property} content={content} />
       ))}
     </Head>
   );
 }
-
-SEO.defaultProps = {
-  lang: `pt-BR`,
-  meta: [],
-  keywords: [],
-};
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
-};
-
-export default SEO;
