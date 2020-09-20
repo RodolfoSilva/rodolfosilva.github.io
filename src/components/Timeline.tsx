@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import styles from './styles.module.css';
 
 interface Props {
-  children?: ReactNode
+  children?: ReactNode;
 }
 
 export default function Timeline(props: Props) {

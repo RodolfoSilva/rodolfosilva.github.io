@@ -1,9 +1,9 @@
 import React from 'react';
+import calculateAgeAt from '../helpers/calculate-age-at';
 
 export default function MyAge() {
-  return (
-    <time dateTime="721056600000">
-      {~~(Date.now() / 31557600000 - 22.847592972849647)}
-    </time>
-  );
+  const birthday = new Date(721056600000);
+  const age = calculateAgeAt(birthday, new Date());
+
+  return <span aria-label="Idade">{age}</span>;
 }

@@ -3,16 +3,14 @@ import styles from './styles.module.css';
 import PeriodFormat from './PeriodFormat';
 
 interface TimeLineItemProps {
-  children?: ReactNode
+  children?: ReactNode;
   title: string;
   subTitle?: string;
   startAt?: string;
   endAt?: string;
 }
 
-export default function Item(
-  props: TimeLineItemProps
-) {
+export default function Item(props: TimeLineItemProps) {
   const { title, subTitle, startAt, endAt, children } = props;
 
   return (

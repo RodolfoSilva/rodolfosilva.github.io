@@ -1,11 +1,15 @@
+html,
 body {
-  font-family: Montserrat, sans-serif;
+  font-family: inter ui, -apple-system, BlinkMacSystemFont, roboto, segoe ui,
+    Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #17072e;
+  color: #fff;
 }
 
 body a {
-  color: #484389;
+  color: #e8c172;
 }
 
 * {
