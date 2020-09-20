@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
+import useWindowSize from '../hooks/use-window-size';
 import GitHubIcon from './GithubIcon';
 import TwitterIcon from './TwitterIcon';
 
@@ -11,9 +12,11 @@ const OpenMenuButton = styled.button`
     display: none;
   }
 
-  color: #FFF;
+  color: #fff;
 
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     color: #08bebf;
     outline: none;
   }
@@ -71,7 +74,9 @@ const CloseMenuButton = styled.button`
     display: none;
   }
 
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     color: #08bebf;
     outline: none;
   }
@@ -138,9 +143,11 @@ const Navigation = styled.nav<NavigationProps>`
       display: block;
       padding: 16px;
       font-size: 2rem;
-      color: #FFF;
+      color: #fff;
       font-weight: 300;
-      &:hover, &:focus, &:active {
+      &:hover,
+      &:focus,
+      &:active {
         color: #08bebf;
         /* color: #FFC500; */
       }
@@ -159,7 +166,10 @@ const Navigation = styled.nav<NavigationProps>`
   }
 `;
 
+const MIN_DESKTOP_WIDTH = 992;
+
 export default function Menu() {
+  const { width } = useWindowSize();
   const [isDisplayLarge, setIsDisplayLarge] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -167,18 +177,27 @@ export default function Menu() {
   const handleCloseClick = () => setIsOpen(false);
 
   React.useEffect(() => {
-    const isDisplayLarge = global.innerWidth >= 992;
-    setIsDisplayLarge(isDisplayLarge);
-    setIsOpen(isDisplayLarge);
-  }, []);
+    setIsDisplayLarge(width >= MIN_DESKTOP_WIDTH);
+  }, [width]);
 
   return (
     <>
-      <OpenMenuButton aria-hidden={isDisplayLarge} aria-label="Abrir o menu" onClick={handleOpenClick}>
+      <OpenMenuButton
+        aria-hidden={isDisplayLarge}
+        aria-label="Abrir o menu"
+        onClick={handleOpenClick}
+      >
         <span className="sr-only">Abrir menu</span>
       </OpenMenuButton>
-      <Navigation aria-hidden={!isOpen} isOpen={isOpen}>
-        <CloseMenuButton aria-hidden={isDisplayLarge} aria-label="Fechar o menu" onClick={handleCloseClick}>
+      <Navigation
+        aria-hidden={!isOpen || isDisplayLarge}
+        isOpen={isOpen || isDisplayLarge}
+      >
+        <CloseMenuButton
+          aria-hidden={isDisplayLarge}
+          aria-label="Fechar o menu"
+          onClick={handleCloseClick}
+        >
           <span className="sr-only">Fechar o menu</span>
         </CloseMenuButton>
         <ul>

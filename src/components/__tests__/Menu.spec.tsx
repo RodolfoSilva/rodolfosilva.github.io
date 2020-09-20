@@ -16,7 +16,7 @@ beforeAll(() => {
 
 beforeEach(() => {
   window.resizeTo(991, 991);
-})
+});
 
 test('should render the menu', () => {
   render(<Menu />);
@@ -38,7 +38,6 @@ test('should display open menu button only in devices less than 992px and hide m
   const closeMenuButton = screen.getByLabelText(/Fechar o menu/i);
   expect(closeMenuButton).toHaveAttribute('aria-hidden', 'false');
   expect(closeMenuButton).toHaveStyleRule('display', 'block');
-
 });
 
 test('should not hide the navigation when the devices greather or equal to 992px', () => {
