@@ -120,7 +120,9 @@ export default function SEO(props: SEOProps) {
 
   return (
     <Head>
-      <title>{title ? `${title} ${titleSeparator} ${siteName}` : siteName}</title>
+      <title>
+        {title ? `${title} ${titleSeparator} ${siteName}` : siteName}
+      </title>
 
       {metas.map(({ name, content }) => (
         <meta key={name} name={name} content={content} />

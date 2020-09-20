@@ -1,8 +1,26 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { ReactNode } from 'react';
-import GitHubIcon from './GithubIcon';
-import TwitterIcon from './TwitterIcon';
+import styled from 'styled-components';
+import Menu from './Menu';
+
+const Container = styled.header`
+  background: linear-gradient(165deg, #36116a, #51199f);
+  font-weight: 500;
+  position: relative;
+  color: #fff;
+  padding: 16px;
+
+  a {
+    color: #fff;
+    box-shadow: none;
+    text-decoration: none;
+  }
+
+  @media print {
+    display: none;
+  }
+`;
 
 interface LayoutProps {
   children?: ReactNode;
@@ -25,7 +43,7 @@ export default function Layout(props: LayoutProps) {
 
   return (
     <>
-      <header role="banner">
+      <Container role="banner">
         <Link href="/">
           <a rel="home">
             <h1>{title}</h1>
@@ -33,39 +51,7 @@ export default function Layout(props: LayoutProps) {
           </a>
         </Link>
 
-        <nav>
-          <ul>
-            <li>
-              <Link href="/curriculo">
-                <a aria-label="Veja o meu Currículo" title="Currículo">
-                  Currículo
-                </a>
-              </Link>
-            </li>
-            <li>
-              <a
-                href={`https://github.com/${github}`}
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="Veja o meu Github"
-                title="GitHub"
-              >
-                <GitHubIcon />
-              </a>
-            </li>
-            <li>
-              <a
-                href={`https://twitter.com/${twitter}`}
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="Veja o meu Twitter"
-                title="Twitter"
-              >
-                <TwitterIcon />
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <Menu />
         {isHomePage ? (
           <div>
             <img
@@ -89,7 +75,7 @@ export default function Layout(props: LayoutProps) {
             </p>
           </div>
         ) : null}
-      </header>
+      </Container>
 
       <main role="main">{children}</main>
 
