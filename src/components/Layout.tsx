@@ -2,23 +2,53 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
+import MainHero from './MainHero';
 import Menu from './Menu';
 
-const Container = styled.header`
+const Header = styled.header`
   background: linear-gradient(165deg, #36116a, #51199f);
   font-weight: 500;
   position: relative;
   color: #fff;
   padding: 16px;
 
+  @media print {
+    display: none;
+  }
+
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-areas:
+      'logo menu'
+      'hero hero';
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+  }
+`;
+
+const MenuContainer = styled.div`
+  grid-area: menu;
+`;
+
+const Logo = styled.div`
+  grid-area: logo;
+
   a {
     color: #fff;
-    box-shadow: none;
     text-decoration: none;
   }
 
-  @media print {
-    display: none;
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 0.885rem;
   }
 `;
 
@@ -28,54 +58,24 @@ interface LayoutProps {
 
 export default function Layout(props: LayoutProps) {
   const { children } = props;
-
-  const router = useRouter();
-
-  const isHomePage = router.pathname === '/';
-
   const currentYear = new Date().getFullYear();
-
-  const author = 'Rodolfo Silva';
-  const title = 'Rodolfo Silva';
-
-  const twitter = 'ro_dolfosilva';
-  const github = 'rodolfosilva';
 
   return (
     <>
-      <Container role="banner">
-        <Link href="/">
-          <a rel="home">
-            <h1>{title}</h1>
-            <h2>Software engineer</h2>
-          </a>
-        </Link>
+      <Header role="banner">
+        <Logo>
+          <Link href="/">
+            <a rel="home">
+              <h1>Rodolfo Silva</h1>
+              <h2>Software engineer</h2>
+            </a>
+          </Link>
+        </Logo>
 
-        <Menu />
-        {isHomePage ? (
-          <div>
-            <img
-              src={`https://github.com/${github}.png?size=200`}
-              aria-label="Foto de Rodolfo Silva"
-              alt={author}
-            />
-            <p>
-              <strong>{author}</strong> Engenheiro de software na
-              infleet.com.br.
-              {` `}
-              <a
-                href={`https://twitter.com/${twitter}`}
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="Siga-me no Twitter"
-                title="Twitter"
-              >
-                Siga-me no Twitter
-              </a>
-            </p>
-          </div>
-        ) : null}
-      </Container>
+        <MenuContainer>
+          <Menu />
+        </MenuContainer>
+      </Header>
 
       <main role="main">{children}</main>
 

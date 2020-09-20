@@ -118,6 +118,7 @@ interface NavigationProps {
 }
 
 const Navigation = styled.nav<NavigationProps>`
+  grid-area: nav;
   ${({ isOpen }) => css`
     opacity: ${isOpen ? 1 : 0};
     visibility: ${isOpen ? 'visible' : 'hidden'};
@@ -145,6 +146,7 @@ const Navigation = styled.nav<NavigationProps>`
       font-size: 2rem;
       color: #fff;
       font-weight: 300;
+      text-decoration: none;
       &:hover,
       &:focus,
       &:active {
