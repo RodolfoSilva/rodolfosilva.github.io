@@ -37,7 +37,7 @@ export default function Layout(props: LayoutProps) {
           <ul>
             <li>
               <Link href="/curriculo">
-                <a aria-label="Currículo" title="Currículo">
+                <a aria-label="Veja o meu Currículo" title="Currículo">
                   Currículo
                 </a>
               </Link>
@@ -47,7 +47,7 @@ export default function Layout(props: LayoutProps) {
                 href={`https://github.com/${github}`}
                 target="_blank"
                 rel="noreferrer noopener"
-                aria-label="Github"
+                aria-label="Veja o meu Github"
                 title="GitHub"
               >
                 <GitHubIcon />
@@ -58,7 +58,7 @@ export default function Layout(props: LayoutProps) {
                 href={`https://twitter.com/${twitter}`}
                 target="_blank"
                 rel="noreferrer noopener"
-                aria-label="Twitter"
+                aria-label="Veja o meu Twitter"
                 title="Twitter"
               >
                 <TwitterIcon />
@@ -81,7 +81,7 @@ export default function Layout(props: LayoutProps) {
                 href={`https://twitter.com/${twitter}`}
                 target="_blank"
                 rel="noreferrer noopener"
-                aria-label="Twitter"
+                aria-label="Siga-me no Twitter"
                 title="Twitter"
               >
                 Siga-me no Twitter
@@ -95,7 +95,7 @@ export default function Layout(props: LayoutProps) {
 
       <footer role="contentinfo">
         {`© ${currentYear}, Built with `}
-        <a href="https://www.nextjs.org" aria-label="Nextjs">
+        <a href="https://www.nextjs.org" aria-label="Feito utilizando Nextjs">
           Nextjs
         </a>
       </footer>

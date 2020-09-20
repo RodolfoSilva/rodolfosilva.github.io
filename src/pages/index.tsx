@@ -13,8 +13,7 @@ export default function Home({ allPosts }: Props) {
   return (
     <Layout>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Rodolfo Silva</title>
       </Head>
 
       {/* <SEO

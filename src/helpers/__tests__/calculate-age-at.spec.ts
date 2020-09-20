@@ -12,7 +12,9 @@ test.each`
   ${'2000-01-01T00:00:00'} | ${'2020-01-01T00:00:00'} | ${20}
   ${'2000-01-01T00:00:00'} | ${'2020-01-01T12:01:00'} | ${20}
   ${'2000-01-01T00:00:00'} | ${'2100-01-01T00:00:00'} | ${100}
-`('returns $expected when $birthday is compared with $at', ({birthday, at, expected}) => {
-  expect(calculateAgeAt(new Date(birthday), new Date(at))).toBe(expected);
-})
-
+`(
+  'returns $expected when $birthday is compared with $at',
+  ({ birthday, at, expected }) => {
+    expect(calculateAgeAt(new Date(birthday), new Date(at))).toBe(expected);
+  }
+);
