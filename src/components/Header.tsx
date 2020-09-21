@@ -26,6 +26,7 @@ const Container = styled.div`
       'hero hero';
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr auto;
+    align-items: center;
   }
 `;
 
