@@ -1,7 +1,9 @@
 import { AppProps } from 'next/app';
-import React from 'react';
+import React, {useEffect } from 'react';
+import Router from 'next/router';
 import 'highlight.js/styles/dracula.css';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { GTMPageView } from '../helpers/gtm.ts';
 import 'typeface-montserrat';
 
 const GlobalStyle = createGlobalStyle`
@@ -44,6 +46,15 @@ const theme = {
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props;
+  
+  // Initiate GTM
+  useEffect(() => {
+    const handleRouteChange = (url: string) => GTMPageView(url);
+    Router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      Router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, []);
 
   return (
     <>
