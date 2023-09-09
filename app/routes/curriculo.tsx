@@ -1,15 +1,14 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import styles from './curriculo.module.css';
+// import Layout from '../components/layout';
+// import SEO from '../components/SEO';
 import MyAge from '../components/MyAge';
 import Timeline from '../components/Timeline';
 import Item from '../components/TimelineItem';
 
 export default function CurriculoPage() {
   return (
-    <Layout>
-      <SEO
+    <>
+      {/* <SEO
         title="Currículo"
         keywords={[
           'react',
@@ -20,7 +19,7 @@ export default function CurriculoPage() {
           'engenheiro de software',
         ]}
         description="Graduado em Sistemas da Informação. Atuando como desenvolvedor de Software desde os 14 anos. Atualmente trabalhando como Engenheiro de Software na Agilize Contabilidade Online."
-      />
+      /> */}
       <h1>Rodolfo da Silva Santos</h1>
 
       <div>
@@ -30,7 +29,7 @@ export default function CurriculoPage() {
       <br />
 
       <div>
-        <div className={styles.contactNumber}>
+        <div>
           <strong>Celular:</strong> <span>+55 71 98366-1106</span>
         </div>
         <div>
@@ -46,13 +45,10 @@ export default function CurriculoPage() {
         </div>
       </div>
 
-      <h2 className={styles.subTitle} id="objetivo">
-        Objetivo
-      </h2>
-
-      <p>Desenvolvedor Sênior</p>
-
-      <h2 className={styles.subTitle} id="formação-acadêmica">
+      <h2
+        className="text-xl py-6 border-b border-gray-50"
+        id="formação-acadêmica"
+      >
         Formação acadêmica
       </h2>
 
@@ -71,7 +67,10 @@ export default function CurriculoPage() {
         />
       </Timeline>
 
-      <h2 className={styles.subTitle} id="conhecimentos-extracurriculares">
+      <h2
+        className="text-xl py-6 border-b border-gray-50"
+        id="conhecimentos-extracurriculares"
+      >
         Conhecimentos extracurriculares
       </h2>
       <Timeline>
@@ -88,15 +87,24 @@ export default function CurriculoPage() {
         </Item>
       </Timeline>
 
-      <h2 className={styles.subTitle} id="experiência-profissional">
+      <h2
+        className="text-xl py-6 border-b border-gray-50"
+        id="experiência-profissional"
+      >
         Experiência profissional
       </h2>
 
       <Timeline>
         <Item
           title="Infleet"
+          subTitle="Chief Technology Officer"
+          startAt="2021-06-30T03:00:00.000Z"
+        />
+        <Item
+          title="Infleet"
           subTitle="Software engineer"
           startAt="2020-01-01T03:00:00.000Z"
+          endAt="2021-06-30T03:00:00.000Z"
         />
         <Item
           title="Agilize - Contabilidade Online"
@@ -147,6 +155,6 @@ export default function CurriculoPage() {
           endAt="2009-01-01T02:59:59.000Z"
         />
       </Timeline>
-    </Layout>
+    </>
   );
 }

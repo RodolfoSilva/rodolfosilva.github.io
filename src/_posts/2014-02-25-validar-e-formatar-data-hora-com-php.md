@@ -14,7 +14,7 @@ tags:
 
 Depois de um tempo resolvi atualizar alguns dos meus <strong>snippets</strong>, um que muitos programadores quando vão trabalhar com data e hora no PHP não tem uma solução definitiva que realmente funcione e atenda a todas as suas necessidades. Não vou entrar muito em detalhe sobre como cada função funciona, para isso temos o book do [PHP][php].
 
-Este é um método bem pequeno e simples para se compreendido, nele você informa em que padrão esta a sua data e ele faz a validação para você.<br>
+Este é um método bem pequeno e simples para se compreendido, nele você informa em que padrão esta a sua data e ele faz a validação para você.<br />
 
 ```php
 <?php
@@ -41,7 +41,7 @@ var_dump(validaData(14, 'H')); # true
 var_dump(validaData('14', 'H')); # true
 ```
 
-Com este método não precisamos ficar dando milhões de explode e implode para fazer a formatação da data, com algumas funções nativas do PHP 5 isso ficou muito mais fácil veja.<br>
+Com este método não precisamos ficar dando milhões de explode e implode para fazer a formatação da data, com algumas funções nativas do PHP 5 isso ficou muito mais fácil veja.<br />
 
 ```php
 <?php
