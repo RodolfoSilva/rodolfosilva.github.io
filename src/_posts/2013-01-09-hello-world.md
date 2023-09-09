@@ -11,5 +11,5 @@ categories:
 slug: outros/hello-world/
 ---
 
-Bem-vindo ao meu blog. <br>
+Bem-vindo ao meu blog. <br />
 Essa é a minha primeira postagem no blog. Ainda não tenho ideia do que irei escrever, com certeza não farei publicações semanais. Começarei a procurar novidades para então começar a publicar!

@@ -1,4 +1,13 @@
 [build]
-  command   = "npm run build"
-  functions = "out_functions"
-  publish   = "out_publish"
+  command = "remix build"
+  publish = "public"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
+
+[[headers]]
+  for = "/build/*"
+  [headers.values]
+    "Cache-Control" = "public, max-age=31536000, immutable"

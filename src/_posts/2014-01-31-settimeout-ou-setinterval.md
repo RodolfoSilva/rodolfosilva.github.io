@@ -11,7 +11,7 @@ tags:
   - tutorial
 ---
 
-Utilizando **JavaScript** podemos executar uma determinada função de tempos em tempos. Em outras palavras é possível criar eventos que serão executados dentro do intervalo definido. Existem duas funções que são utilizados para a criação destes eventos que são: o `setTimeout()` e `setInterval()`. A diferença entres estas duas funções esta no comportamento. A função **setTimeout** é executada apenas uma unica vez após um determinado tempo, e o **setInterval** é executada em intervalos de tempo indefinidamente.<br>
+Utilizando **JavaScript** podemos executar uma determinada função de tempos em tempos. Em outras palavras é possível criar eventos que serão executados dentro do intervalo definido. Existem duas funções que são utilizados para a criação destes eventos que são: o `setTimeout()` e `setInterval()`. A diferença entres estas duas funções esta no comportamento. A função **setTimeout** é executada apenas uma unica vez após um determinado tempo, e o **setInterval** é executada em intervalos de tempo indefinidamente.<br />
 
 ```javascript
 // Executa o evento a cada 10 segundos

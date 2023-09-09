@@ -36,7 +36,7 @@ campo **parent**. Por ser novato com o Django gastei horas e horas pesquisando
 e "quebrando a cabeça", até não encontrar nada praticamente, então resolvi
 deixar de ser preguiçoso, e parti para tentativa e erro, peguei a documentação
 e comecei a destrinchar, então acabei descobrindo que eu poderia manipular os
-campos do formulário do administrador criados dinamicamente pelo django.<br>
+campos do formulário do administrador criados dinamicamente pelo django.<br />
 Então adicionei uma nova classe no meu arquivo **admin.py**.
 
 ```python

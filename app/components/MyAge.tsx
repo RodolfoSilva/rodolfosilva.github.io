@@ -1,5 +1,5 @@
 import React from 'react';
-import calculateAgeAt from '../helpers/calculate-age-at';
+import calculateAgeAt from '../utils/calculate-age-at';
 
 export default function MyAge() {
   const birthday = new Date(721056600000);
