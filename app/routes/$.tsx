@@ -1,12 +1,21 @@
 import { getMDXComponent } from 'mdx-bundler/client';
 import { useMemo } from 'react';
-import { Link, useLoaderData } from '@remix-run/react';
+import {   useLoaderData } from '@remix-run/react';
 import { getPost } from '~/utils/post';
-import { LinksFunction, LoaderFunction, json } from '@remix-run/node';
+import { json } from '@remix-run/node';
 import styles from 'highlight.js/styles/github-dark-dimmed.css';
 import Discussion from '~/components/Discussion';
+import type {  V2_MetaFunction , LinksFunction, LoaderFunction} from "@remix-run/node";
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
+
+export const meta: V2_MetaFunction<typeof loader> = (  params) => {
+  const { data: { frontmatter: post } } = params
+  return [
+    { title: post.title },
+    { property: "og:title", content: post.title },
+   ];
+};
 
 export const loader: LoaderFunction = async ({ params }) => {
   const slug = params['*'];
