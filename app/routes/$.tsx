@@ -13,6 +13,13 @@ export const meta: V2_MetaFunction<typeof loader> = (  params) => {
   return [
     { title: post.title },
     { property: "og:title", content: post.title },
+    { property: "keywords", content: post.tags.join(", ") },
+    ...(post.description
+      ? [
+          { property: "description", content: post.description },
+          { property: "og:description", content: post.description },
+        ]
+      : []),
    ];
 };
 

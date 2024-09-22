@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Adding a new icon collection to a Phoenix project
+description: Learn how to easily add custom icon collections, like Lucide, to your Phoenix project. This guide covers configuring icon dependencies, updating Tailwind, and seamlessly integrating new SVG icons alongside Heroicons.
 date: 2024-09-22 10:00:00.000000000 -03:00
 slug: elixir/adding-a-new-icon-collection-to-a-phoenix-project/
 categories:
