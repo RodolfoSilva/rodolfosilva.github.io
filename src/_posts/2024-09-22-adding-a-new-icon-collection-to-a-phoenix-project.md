@@ -16,7 +16,7 @@ Most popular icon collections provide their icons in SVG format. In this article
 
 To include [Lucide](https://lucide.dev/) as a dependency, specify the icons directory from the repository using the sparse option. Additionally, disable the app and compilation by setting `app: false` and `compile: false`. Set the dependency level to 1. To ensure version consistency, reference a specific tag or version as shown below:
 
-```rb
+```elixir
 {:lucide,
   github: "lucide-icons/lucide",
   tag: "0.445.0",
@@ -29,7 +29,7 @@ To include [Lucide](https://lucide.dev/) as a dependency, specify the icons dire
 
 In your `core_component.ex`, after the existing `icon/1` function, add a new variation as shown below. This will allow you to use [Lucide](https://lucide.dev/) icons with the `lucide-` prefix:
 
-```rb
+```elixir
 def icon(%{name: "lucide-" <> _} = assigns) do
   ~H"""
   <span class={[@name, @class]} />

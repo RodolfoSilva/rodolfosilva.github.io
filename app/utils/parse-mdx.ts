@@ -2,7 +2,7 @@ import { bundleMDX } from './mdx.server';
 
 export async function parseMdx(source: string) {
   const [rehypeHighlight, remarkGfm] = await Promise.all([
-    import('rehype-highlight').then((mod) => mod.default),
+    import('rehype-pretty-code').then((mod) => mod.default),
     import('remark-gfm').then((mod) => mod.default),
   ]);
 

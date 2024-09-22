@@ -3,11 +3,10 @@ import { useMemo } from 'react';
 import {   useLoaderData } from '@remix-run/react';
 import { getPost } from '~/utils/post';
 import { json } from '@remix-run/node';
-import styles from 'highlight.js/styles/github-dark-dimmed.css';
 import Discussion from '~/components/Discussion';
 import type {  V2_MetaFunction , LinksFunction, LoaderFunction} from "@remix-run/node";
 
-export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
+export const links: LinksFunction = () => [];
 
 export const meta: V2_MetaFunction<typeof loader> = (  params) => {
   const { data: { frontmatter: post } } = params
