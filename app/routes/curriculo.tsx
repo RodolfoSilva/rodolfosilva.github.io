@@ -1,54 +1,49 @@
-import React from 'react';
+import React from "react";
 // import Layout from '../components/layout';
 // import SEO from '../components/SEO';
-import MyAge from '../components/MyAge';
-import Timeline from '../components/Timeline';
-import Item from '../components/TimelineItem';
+import MyAge from "../components/MyAge";
+import Timeline from "../components/Timeline";
+import Item from "../components/TimelineItem";
 
 export default function CurriculoPage() {
   return (
     <>
-      {/* <SEO
-        title="Currículo"
-        keywords={[
-          'react',
-          'javascript',
-          'python',
-          'resume',
-          'software enginier',
-          'engenheiro de software',
-        ]}
-        description="Graduado em Sistemas da Informação. Atuando como desenvolvedor de Software desde os 14 anos. Atualmente trabalhando como Engenheiro de Software na Agilize Contabilidade Online."
-      /> */}
-      <h1>Rodolfo da Silva Santos</h1>
+      <h1 className="text-xl mt-4">Rodolfo da Silva Santos</h1>
 
-      <div>
+      <div className="text-sm text-gray-700">
         Brasileiro, Casado, <MyAge /> anos Salvador - BA
       </div>
 
       <br />
 
-      <div>
-        <div>
-          <strong>Celular:</strong> <span>+55 71 98366-1106</span>
+      <div className="text-sm grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+        <div className="text-gray-800 font-medium">
+          <strong className="sm:block text-gray-700 font-normal text-xs">
+            Celular:
+          </strong>{" "}
+          +55 71 98366-1106
         </div>
-        <div>
-          <strong>E­mail:</strong> <span>contato@rodolfosilva.com</span>
+        <div className="text-gray-800 font-medium">
+          <strong className="sm:block text-gray-700 font-normal text-xs">
+            E­mail:
+          </strong>{" "}
+          contato@rodolfosilva.com
         </div>
-        <div>
-          <strong>Web:</strong>{' '}
+        <div className="text-gray-800 font-medium">
+          <strong className="sm:block text-gray-700 font-normal text-xs">
+            Web:
+          </strong>{" "}
           <a href="http://rodolfosilva.com">rodolfosilva.com</a>
         </div>
-        <div>
-          <strong>GitHub:</strong>{' '}
+        <div className="text-gray-800 font-medium">
+          <strong className="sm:block text-gray-700 font-normal text-xs">
+            GitHub:
+          </strong>{" "}
           <a href="https://github.com/RodolfoSilva">github.com/RodolfoSilva</a>
         </div>
       </div>
 
-      <h2
-        className="text-xl py-6 border-b border-gray-50"
-        id="formação-acadêmica"
-      >
+      <h2 className="text-lg text-gray-800 mt-8 mb-4" id="formação-acadêmica">
         Formação acadêmica
       </h2>
 
@@ -68,7 +63,7 @@ export default function CurriculoPage() {
       </Timeline>
 
       <h2
-        className="text-xl py-6 border-b border-gray-50"
+        className="text-lg text-gray-800 mt-8 mb-4"
         id="conhecimentos-extracurriculares"
       >
         Conhecimentos extracurriculares
@@ -88,7 +83,7 @@ export default function CurriculoPage() {
       </Timeline>
 
       <h2
-        className="text-xl py-6 border-b border-gray-50"
+        className="text-lg text-gray-800 mt-8 mb-4"
         id="experiência-profissional"
       >
         Experiência profissional

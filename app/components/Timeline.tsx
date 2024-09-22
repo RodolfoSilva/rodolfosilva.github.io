@@ -1,5 +1,4 @@
-import React, { ReactNode } from 'react';
-import styles from './styles.module.css';
+import { ReactNode } from "react";
 
 interface Props {
   children?: ReactNode;
@@ -7,5 +6,5 @@ interface Props {
 
 export default function Timeline(props: Props) {
   const { children } = props;
-  return <ul className={styles.timeline}>{children}</ul>;
+  return <ul>{children}</ul>;
 }
