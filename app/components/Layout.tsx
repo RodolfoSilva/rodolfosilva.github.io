@@ -1,7 +1,7 @@
-import { Link } from '@remix-run/react';
-import React from 'react';
-import GitHubIcon from './GithubIcon';
-import TwitterIcon from './TwitterIcon';
+import { Link } from "@remix-run/react";
+import React from "react";
+import GitHubIcon from "./GithubIcon";
+import TwitterIcon from "./TwitterIcon";
 
 type Props = {
   children: React.ReactNode;
@@ -17,11 +17,13 @@ export default function Layout(props: Props) {
         <header>
           <div className="flex justify-between items-center">
             <Link to="/" rel="home">
-              <h1 className="text-4xl font-semibold">Rodolfo Silva</h1>
-              <h2 className="text-base text-gray-500">Software engineer</h2>
+              <h1 className="text-4xl font-semibold text-gray-800">
+                Rodolfo Silva
+              </h1>
+              <h2 className="text-sm text-gray-500">Software engineer</h2>
             </Link>
 
-            <nav>
+            <nav className="print:hidden">
               <ul className="flex items-center gap-4">
                 <li>
                   <Link
