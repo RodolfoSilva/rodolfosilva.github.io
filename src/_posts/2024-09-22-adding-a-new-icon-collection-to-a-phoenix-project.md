@@ -16,9 +16,8 @@ Most popular icon collections provide their icons in SVG format. In this article
 
 To include [Lucide](https://lucide.dev/) as a dependency, specify the icons directory from the repository using the sparse option. Additionally, disable the app and compilation by setting `app: false` and `compile: false`. Set the dependency level to 1. To ensure version consistency, reference a specific tag or version as shown below:
 
-```elixir
-{
-  :lucide,
+```rb
+{:lucide,
   github: "lucide-icons/lucide",
   tag: "0.445.0",
   sparse: "icons",
@@ -30,12 +29,12 @@ To include [Lucide](https://lucide.dev/) as a dependency, specify the icons dire
 
 In your `core_component.ex`, after the existing `icon/1` function, add a new variation as shown below. This will allow you to use [Lucide](https://lucide.dev/) icons with the `lucide-` prefix:
 
-```elixir
-  def icon(%{name: "lucide-" <> _} = assigns) do
-    ~H"""
-    <span class={[@name, @class]} />
-    """
-  end
+```rb
+def icon(%{name: "lucide-" <> _} = assigns) do
+  ~H"""
+  <span class={[@name, @class]} />
+  """
+end
 ```
 
 You will need to update your `tailwind.config.js` to compile all icons with the `lucide-` prefix as Tailwind classes. The version below is a modified variant of the original [Heroicons](https://heroicons.com/) configuration plugin, adapted to work with [Lucide](https://lucide.dev/). Essentially, this configuration will scan for all icons in the icons folder of the dependency we added and generate a class for each icon with the necessary styles. In the `matchComponents`, you should provide the icon collection name as the key and make any necessary adjustments for your icon collection. In my case, I had to remove the default `width` and `height` attributes from the icons and adjust the `stroke-width` to match the value used by the [Heroicons](https://heroicons.com/) collection. This way, both collections can be used seamlessly in the project. Be sure to include this code as the last plugin in the list inside the configuration file.
