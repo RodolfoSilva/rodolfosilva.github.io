@@ -11,7 +11,7 @@ export default function CurriculoPage() {
       <h1 className="text-xl mt-4">Rodolfo da Silva Santos</h1>
 
       <div className="text-sm text-gray-700">
-        Brasileiro, Casado, <MyAge /> anos Salvador - BA
+        Brasileiro, Casado, <MyAge /> anos São Paulo - SP
       </div>
 
       <br />
